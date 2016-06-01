@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD1AAD8F1CEAB53A005D8CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AAD8E1CEAB53A005D8CF3 /* AppDelegate.swift */; };
+		BD1AAD911CEAB53A005D8CF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AAD901CEAB53A005D8CF3 /* ViewController.swift */; };
+		BD1AAD941CEAB53A005D8CF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1AAD921CEAB53A005D8CF3 /* Main.storyboard */; };
+		BD1AAD961CEAB53A005D8CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AAD951CEAB53A005D8CF3 /* Assets.xcassets */; };
+		BD1AAD991CEAB53A005D8CF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1AAD971CEAB53A005D8CF3 /* LaunchScreen.storyboard */; };
+		BD1AADA41CEAB53A005D8CF3 /* DomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AADA31CEAB53A005D8CF3 /* DomeTests.swift */; };
+		BD1AADAF1CEAB53A005D8CF3 /* DomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AADAE1CEAB53A005D8CF3 /* DomeUITests.swift */; };
+		BD1AADC01CEAB5CE005D8CF3 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AADBE1CEAB5CE005D8CF3 /* JPEngine.m */; };
+		BD1AADC11CEAB5CE005D8CF3 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */; };
+		BD1AADC41CEAB6E1005D8CF3 /* dome.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADC31CEAB6E1005D8CF3 /* dome.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD1AADA01CEAB53A005D8CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD1AAD831CEAB53A005D8CF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1AAD8A1CEAB53A005D8CF3;
+			remoteInfo = Dome;
+		};
+		BD1AADAB1CEAB53A005D8CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD1AAD831CEAB53A005D8CF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1AAD8A1CEAB53A005D8CF3;
+			remoteInfo = Dome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD1AAD8B1CEAB53A005D8CF3 /* Dome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1AAD8E1CEAB53A005D8CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD1AAD901CEAB53A005D8CF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD1AAD931CEAB53A005D8CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD1AAD951CEAB53A005D8CF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD1AAD981CEAB53A005D8CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD1AAD9A1CEAB53A005D8CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD1AAD9F1CEAB53A005D8CF3 /* DomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1AADA31CEAB53A005D8CF3 /* DomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomeTests.swift; sourceTree = "<group>"; };
+		BD1AADA51CEAB53A005D8CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD1AADAA1CEAB53A005D8CF3 /* DomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1AADAE1CEAB53A005D8CF3 /* DomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomeUITests.swift; sourceTree = "<group>"; };
+		BD1AADB01CEAB53A005D8CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD1AADBD1CEAB5CE005D8CF3 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		BD1AADBE1CEAB5CE005D8CF3 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dome-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD1AADC31CEAB6E1005D8CF3 /* dome.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dome.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD1AAD881CEAB53A005D8CF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1AAD9C1CEAB53A005D8CF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1AADA71CEAB53A005D8CF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD1AAD821CEAB53A005D8CF3 = {
+			isa = PBXGroup;
+			children = (
+				BD1AAD8D1CEAB53A005D8CF3 /* Dome */,
+				BD1AADA21CEAB53A005D8CF3 /* DomeTests */,
+				BD1AADAD1CEAB53A005D8CF3 /* DomeUITests */,
+				BD1AAD8C1CEAB53A005D8CF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD1AAD8C1CEAB53A005D8CF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD1AAD8B1CEAB53A005D8CF3 /* Dome.app */,
+				BD1AAD9F1CEAB53A005D8CF3 /* DomeTests.xctest */,
+				BD1AADAA1CEAB53A005D8CF3 /* DomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD1AAD8D1CEAB53A005D8CF3 /* Dome */ = {
+			isa = PBXGroup;
+			children = (
+				BD1AADBC1CEAB5CE005D8CF3 /* JSPatch */,
+				BD1AAD8E1CEAB53A005D8CF3 /* AppDelegate.swift */,
+				BD1AAD901CEAB53A005D8CF3 /* ViewController.swift */,
+				BD1AAD921CEAB53A005D8CF3 /* Main.storyboard */,
+				BD1AAD951CEAB53A005D8CF3 /* Assets.xcassets */,
+				BD1AAD971CEAB53A005D8CF3 /* LaunchScreen.storyboard */,
+				BD1AAD9A1CEAB53A005D8CF3 /* Info.plist */,
+				BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */,
+				BD1AADC31CEAB6E1005D8CF3 /* dome.js */,
+			);
+			path = Dome;
+			sourceTree = "<group>";
+		};
+		BD1AADA21CEAB53A005D8CF3 /* DomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD1AADA31CEAB53A005D8CF3 /* DomeTests.swift */,
+				BD1AADA51CEAB53A005D8CF3 /* Info.plist */,
+			);
+			path = DomeTests;
+			sourceTree = "<group>";
+		};
+		BD1AADAD1CEAB53A005D8CF3 /* DomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD1AADAE1CEAB53A005D8CF3 /* DomeUITests.swift */,
+				BD1AADB01CEAB53A005D8CF3 /* Info.plist */,
+			);
+			path = DomeUITests;
+			sourceTree = "<group>";
+		};
+		BD1AADBC1CEAB5CE005D8CF3 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				BD1AADBD1CEAB5CE005D8CF3 /* JPEngine.h */,
+				BD1AADBE1CEAB5CE005D8CF3 /* JPEngine.m */,
+				BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */,
+			);
+			name = JSPatch;
+			path = ../../../JSPatch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD1AAD8A1CEAB53A005D8CF3 /* Dome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1AADB31CEAB53A005D8CF3 /* Build configuration list for PBXNativeTarget "Dome" */;
+			buildPhases = (
+				BD1AAD871CEAB53A005D8CF3 /* Sources */,
+				BD1AAD881CEAB53A005D8CF3 /* Frameworks */,
+				BD1AAD891CEAB53A005D8CF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dome;
+			productName = Dome;
+			productReference = BD1AAD8B1CEAB53A005D8CF3 /* Dome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD1AAD9E1CEAB53A005D8CF3 /* DomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1AADB61CEAB53A005D8CF3 /* Build configuration list for PBXNativeTarget "DomeTests" */;
+			buildPhases = (
+				BD1AAD9B1CEAB53A005D8CF3 /* Sources */,
+				BD1AAD9C1CEAB53A005D8CF3 /* Frameworks */,
+				BD1AAD9D1CEAB53A005D8CF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1AADA11CEAB53A005D8CF3 /* PBXTargetDependency */,
+			);
+			name = DomeTests;
+			productName = DomeTests;
+			productReference = BD1AAD9F1CEAB53A005D8CF3 /* DomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD1AADA91CEAB53A005D8CF3 /* DomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1AADB91CEAB53A005D8CF3 /* Build configuration list for PBXNativeTarget "DomeUITests" */;
+			buildPhases = (
+				BD1AADA61CEAB53A005D8CF3 /* Sources */,
+				BD1AADA71CEAB53A005D8CF3 /* Frameworks */,
+				BD1AADA81CEAB53A005D8CF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1AADAC1CEAB53A005D8CF3 /* PBXTargetDependency */,
+			);
+			name = DomeUITests;
+			productName = DomeUITests;
+			productReference = BD1AADAA1CEAB53A005D8CF3 /* DomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD1AAD831CEAB53A005D8CF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lben;
+				TargetAttributes = {
+					BD1AAD8A1CEAB53A005D8CF3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					BD1AAD9E1CEAB53A005D8CF3 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BD1AAD8A1CEAB53A005D8CF3;
+					};
+					BD1AADA91CEAB53A005D8CF3 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BD1AAD8A1CEAB53A005D8CF3;
+					};
+				};
+			};
+			buildConfigurationList = BD1AAD861CEAB53A005D8CF3 /* Build configuration list for PBXProject "Dome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD1AAD821CEAB53A005D8CF3;
+			productRefGroup = BD1AAD8C1CEAB53A005D8CF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD1AAD8A1CEAB53A005D8CF3 /* Dome */,
+				BD1AAD9E1CEAB53A005D8CF3 /* DomeTests */,
+				BD1AADA91CEAB53A005D8CF3 /* DomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD1AAD891CEAB53A005D8CF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD1AADC41CEAB6E1005D8CF3 /* dome.js in Resources */,
+				BD1AAD991CEAB53A005D8CF3 /* LaunchScreen.storyboard in Resources */,
+				BD1AAD961CEAB53A005D8CF3 /* Assets.xcassets in Resources */,
+				BD1AADC11CEAB5CE005D8CF3 /* JSPatch.js in Resources */,
+				BD1AAD941CEAB53A005D8CF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1AAD9D1CEAB53A005D8CF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1AADA81CEAB53A005D8CF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD1AAD871CEAB53A005D8CF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD1AADC01CEAB5CE005D8CF3 /* JPEngine.m in Sources */,
+				BD1AAD911CEAB53A005D8CF3 /* ViewController.swift in Sources */,
+				BD1AAD8F1CEAB53A005D8CF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1AAD9B1CEAB53A005D8CF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD1AADA41CEAB53A005D8CF3 /* DomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD1AADA61CEAB53A005D8CF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD1AADAF1CEAB53A005D8CF3 /* DomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD1AADA11CEAB53A005D8CF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD1AAD8A1CEAB53A005D8CF3 /* Dome */;
+			targetProxy = BD1AADA01CEAB53A005D8CF3 /* PBXContainerItemProxy */;
+		};
+		BD1AADAC1CEAB53A005D8CF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD1AAD8A1CEAB53A005D8CF3 /* Dome */;
+			targetProxy = BD1AADAB1CEAB53A005D8CF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD1AAD921CEAB53A005D8CF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD1AAD931CEAB53A005D8CF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD1AAD971CEAB53A005D8CF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD1AAD981CEAB53A005D8CF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD1AADB11CEAB53A005D8CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD1AADB21CEAB53A005D8CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD1AADB41CEAB53A005D8CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.Dome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dome/Dome-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		BD1AADB51CEAB53A005D8CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.Dome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dome/Dome-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		BD1AADB71CEAB53A005D8CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.DomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dome.app/Dome";
+			};
+			name = Debug;
+		};
+		BD1AADB81CEAB53A005D8CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.DomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dome.app/Dome";
+			};
+			name = Release;
+		};
+		BD1AADBA1CEAB53A005D8CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.DomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Dome;
+			};
+			name = Debug;
+		};
+		BD1AADBB1CEAB53A005D8CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.DomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Dome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD1AAD861CEAB53A005D8CF3 /* Build configuration list for PBXProject "Dome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1AADB11CEAB53A005D8CF3 /* Debug */,
+				BD1AADB21CEAB53A005D8CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD1AADB31CEAB53A005D8CF3 /* Build configuration list for PBXNativeTarget "Dome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1AADB41CEAB53A005D8CF3 /* Debug */,
+				BD1AADB51CEAB53A005D8CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD1AADB61CEAB53A005D8CF3 /* Build configuration list for PBXNativeTarget "DomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1AADB71CEAB53A005D8CF3 /* Debug */,
+				BD1AADB81CEAB53A005D8CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD1AADB91CEAB53A005D8CF3 /* Build configuration list for PBXNativeTarget "DomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1AADBA1CEAB53A005D8CF3 /* Debug */,
+				BD1AADBB1CEAB53A005D8CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD1AAD831CEAB53A005D8CF3 /* Project object */;
+}
