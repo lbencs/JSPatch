@@ -35,29 +35,27 @@ defineClass('Dome.ViewController : UIViewController<UITableViewDelegate,UITableV
             
             self.testErrorPoint(pError);
             
-            
             console.log("pError : start");
             console.log(pError)
             console.log("pError : end");
-            
-            var error = pval(pError);
-            
-            console.log("start");
-            console.log(error);
-            console.log("end");
-            
-            if(!error) {
-            console.log("success");
-            }else{
-            console.log(error);
-            }
-            releaseTmpObj(pError)
-            free(pError)
-
-            
+			
+			var error = pval(pError);
+			
+			console.log("start");
+			console.log(error);
+			console.log("end");
+			
+			if(!error) {
+			console.log("success");
+			}else{
+			console.log(error);
+			}
+			releaseTmpObj(pError)
+			free(pError)
+		
             console.log("test------JPMemory");
             },
-            
+			
             testErrorPoint: function(error) {
             var tmp = require('NSError').errorWithDomain_code_userInfo("test.com",10012,null);
             var newErrorPointer = getPointer(tmp);

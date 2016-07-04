@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 	
+	let jsParser: JSParser = JSParser()
+	
     override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
@@ -17,13 +19,20 @@ class ViewController: UIViewController {
         var error : NSError? = nil
         
         self.testPointer(&error)
+		
+		jsParser.parser()
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-    
+	
+
+	
+	
+	
+	
     func showAlert() -> Void {
         let alert = UIAlertView()
         alert.title = "AlertView"
@@ -34,7 +43,6 @@ class ViewController: UIViewController {
     }
     
     func testPointer(inout pointer: NSError?) -> Void {
-//        NSURLSession.provideImageData(<#T##data: UnsafeMutablePointer<Void>##UnsafeMutablePointer<Void>#>, bytesPerRow: <#T##Int#>, origin: <#T##Int#>, <#T##y: Int##Int#>, size: <#T##Int#>, <#T##height: Int##Int#>, userInfo: <#T##AnyObject?#>)
         let error = NSError(domain: "www.baidu.com", code: Int(10010), userInfo: ["errMsg":"domain error"])
         pointer = error
         print("unsafepointer is:",pointer)

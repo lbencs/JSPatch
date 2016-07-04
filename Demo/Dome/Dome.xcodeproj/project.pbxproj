@@ -34,6 +34,7 @@
 		BD1AADC01CEAB5CE005D8CF3 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AADBE1CEAB5CE005D8CF3 /* JPEngine.m */; };
 		BD1AADC11CEAB5CE005D8CF3 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */; };
 		BD1AADC41CEAB6E1005D8CF3 /* dome.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADC31CEAB6E1005D8CF3 /* dome.js */; };
+		BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1570C1D2A86B900BC7306 /* JSParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dome-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD1AADC31CEAB6E1005D8CF3 /* dome.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dome.js; sourceTree = "<group>"; };
+		BDC1570C1D2A86B900BC7306 /* JSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				BD1AAD9A1CEAB53A005D8CF3 /* Info.plist */,
 				BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */,
 				BD1AADC31CEAB6E1005D8CF3 /* dome.js */,
+				BDC1570C1D2A86B900BC7306 /* JSParser.swift */,
 			);
 			path = Dome;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				55AEB7A01D28FB52009E5FE7 /* JPCoreGraphics.m in Sources */,
 				BD1AAD911CEAB53A005D8CF3 /* ViewController.swift in Sources */,
 				55AEB7A51D28FB52009E5FE7 /* JPStructPointer.m in Sources */,
+				BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */,
 				55AEB79D1D28FB52009E5FE7 /* JPCGImage.m in Sources */,
 				BD1AAD8F1CEAB53A005D8CF3 /* AppDelegate.swift in Sources */,
 				55AEB79B1D28FB52009E5FE7 /* JPCGContext.m in Sources */,
