@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C4348D40A4D221DDAD99381 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A354BF41D400455B098BBF0B /* libPods.a */; };
 		36091A1B1CAAA2830012490F /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 36091A191CAAA2830012490F /* JPEngine.m */; };
 		36091A1C1CAAA2830012490F /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 36091A1A1CAAA2830012490F /* JSPatch.js */; };
 		36091A6F1CAB91990012490F /* JPCGBitmapContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 36091A4B1CAB91980012490F /* JPCGBitmapContext.m */; };
@@ -28,12 +27,16 @@
 		36091A7F1CAB91990012490F /* JPUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36091A6C1CAB91980012490F /* JPUIImage.m */; };
 		36091A801CAB91990012490F /* JPUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 36091A6E1CAB91980012490F /* JPUIKit.m */; };
 		36CE19221CB17D6A007D73AC /* dribbble in Resources */ = {isa = PBXBuildFile; fileRef = 36CE19211CB17D6A007D73AC /* dribbble */; };
+		55AEB7AB1D2A9FD8009E5FE7 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AEB7AA1D2A9FD8009E5FE7 /* libAFNetworking.a */; };
+		55AEB7AD1D2A9FDC009E5FE7 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AEB7AC1D2A9FDC009E5FE7 /* libSDWebImage.a */; };
+		6A64D39E8ED151D26C203A09 /* libPods-dribbbleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC725993B5B53A13294533E /* libPods-dribbbleDemo.a */; };
 		DEBA57DF1B95D5A200B4DC66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBA57DE1B95D5A200B4DC66 /* main.m */; };
 		DEBA57E21B95D5A300B4DC66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBA57E11B95D5A300B4DC66 /* AppDelegate.m */; };
 		DEBA57EA1B95D5A300B4DC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBA57E91B95D5A300B4DC66 /* Images.xcassets */; };
 		DEBA57F91B95D5A300B4DC66 /* dribbbleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBA57F81B95D5A300B4DC66 /* dribbbleDemoTests.m */; };
 		DEBA58531B95DA6E00B4DC66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBA58521B95DA6E00B4DC66 /* UIKit.framework */; };
 		DEBA58551B95DA7C00B4DC66 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBA58541B95DA7C00B4DC66 /* Security.framework */; };
+		F83B86CA78F15A789737AAD3 /* libPods-dribbbleDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92449E432A31565E11D428CB /* libPods-dribbbleDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023275711ED859F59CAA7355 /* Pods-dribbbleDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dribbbleDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dribbbleDemoTests/Pods-dribbbleDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		0A8B1CDBA40FFAD086BA1A15 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		272BEB9ED6C1DE5CCEDA805B /* Pods-dribbbleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dribbbleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-dribbbleDemo/Pods-dribbbleDemo.release.xcconfig"; sourceTree = "<group>"; };
 		36091A181CAAA2830012490F /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		36091A191CAAA2830012490F /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		36091A1A1CAAA2830012490F /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
@@ -86,8 +91,14 @@
 		36091A6D1CAB91980012490F /* JPUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIKit.h; sourceTree = "<group>"; };
 		36091A6E1CAB91980012490F /* JPUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIKit.m; sourceTree = "<group>"; };
 		36CE19211CB17D6A007D73AC /* dribbble */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dribbble; sourceTree = "<group>"; };
+		3C83D77F73881D6E34B416AA /* Pods-dribbbleDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dribbbleDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dribbbleDemoTests/Pods-dribbbleDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		55AEB7AA1D2A9FD8009E5FE7 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../../../../Library/Developer/Xcode/DerivedData/dribbbleDemo-cagizelwywdrggejwnaarjaorywy/Build/Products/Debug-iphonesimulator/AFNetworking/libAFNetworking.a"; sourceTree = "<group>"; };
+		55AEB7AC1D2A9FDC009E5FE7 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "../../../../../Library/Developer/Xcode/DerivedData/dribbbleDemo-cagizelwywdrggejwnaarjaorywy/Build/Products/Debug-iphonesimulator/SDWebImage/libSDWebImage.a"; sourceTree = "<group>"; };
 		5B21F30B82AD2BCFBD981366 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6309F73E86854C5C82F3C55B /* Pods-dribbbleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dribbbleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dribbbleDemo/Pods-dribbbleDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		92449E432A31565E11D428CB /* libPods-dribbbleDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dribbbleDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A354BF41D400455B098BBF0B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC725993B5B53A13294533E /* libPods-dribbbleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dribbbleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBA57D91B95D5A200B4DC66 /* dribbbleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dribbbleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBA57DD1B95D5A200B4DC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEBA57DE1B95D5A200B4DC66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,9 +117,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AEB7AD1D2A9FDC009E5FE7 /* libSDWebImage.a in Frameworks */,
+				55AEB7AB1D2A9FD8009E5FE7 /* libAFNetworking.a in Frameworks */,
 				DEBA58551B95DA7C00B4DC66 /* Security.framework in Frameworks */,
 				DEBA58531B95DA6E00B4DC66 /* UIKit.framework in Frameworks */,
-				1C4348D40A4D221DDAD99381 /* libPods.a in Frameworks */,
+				6A64D39E8ED151D26C203A09 /* libPods-dribbbleDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83B86CA78F15A789737AAD3 /* libPods-dribbbleDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +141,10 @@
 			children = (
 				5B21F30B82AD2BCFBD981366 /* Pods.debug.xcconfig */,
 				0A8B1CDBA40FFAD086BA1A15 /* Pods.release.xcconfig */,
+				6309F73E86854C5C82F3C55B /* Pods-dribbbleDemo.debug.xcconfig */,
+				272BEB9ED6C1DE5CCEDA805B /* Pods-dribbbleDemo.release.xcconfig */,
+				3C83D77F73881D6E34B416AA /* Pods-dribbbleDemoTests.debug.xcconfig */,
+				023275711ED859F59CAA7355 /* Pods-dribbbleDemoTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -265,7 +283,11 @@
 		FF293541306D58FD4BDAA5CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55AEB7AC1D2A9FDC009E5FE7 /* libSDWebImage.a */,
+				55AEB7AA1D2A9FD8009E5FE7 /* libAFNetworking.a */,
 				A354BF41D400455B098BBF0B /* libPods.a */,
+				CDC725993B5B53A13294533E /* libPods-dribbbleDemo.a */,
+				92449E432A31565E11D428CB /* libPods-dribbbleDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,11 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEBA57FC1B95D5A300B4DC66 /* Build configuration list for PBXNativeTarget "dribbbleDemo" */;
 			buildPhases = (
-				379F843EA00F8D428B9036AE /* Check Pods Manifest.lock */,
+				379F843EA00F8D428B9036AE /* [CP] Check Pods Manifest.lock */,
 				DEBA57D51B95D5A200B4DC66 /* Sources */,
 				DEBA57D61B95D5A200B4DC66 /* Frameworks */,
 				DEBA57D71B95D5A200B4DC66 /* Resources */,
-				5051F1B8E1BE3F57F4085EA8 /* Copy Pods Resources */,
+				5051F1B8E1BE3F57F4085EA8 /* [CP] Copy Pods Resources */,
+				1D16892A066851A1A3E94C11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,9 +319,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEBA57FF1B95D5A300B4DC66 /* Build configuration list for PBXNativeTarget "dribbbleDemoTests" */;
 			buildPhases = (
+				43108F4514C0510B73312162 /* [CP] Check Pods Manifest.lock */,
 				DEBA57EE1B95D5A300B4DC66 /* Sources */,
 				DEBA57EF1B95D5A300B4DC66 /* Frameworks */,
 				DEBA57F01B95D5A300B4DC66 /* Resources */,
+				5ACEC044637CD4F2FEA833BB /* [CP] Embed Pods Frameworks */,
+				2B88CCC9A03F46EB21DCE9A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,14 +394,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		379F843EA00F8D428B9036AE /* Check Pods Manifest.lock */ = {
+		1D16892A066851A1A3E94C11 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dribbbleDemo/Pods-dribbbleDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B88CCC9A03F46EB21DCE9A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dribbbleDemoTests/Pods-dribbbleDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		379F843EA00F8D428B9036AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,19 +439,49 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5051F1B8E1BE3F57F4085EA8 /* Copy Pods Resources */ = {
+		43108F4514C0510B73312162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5051F1B8E1BE3F57F4085EA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dribbbleDemo/Pods-dribbbleDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ACEC044637CD4F2FEA833BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dribbbleDemoTests/Pods-dribbbleDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -531,7 +617,7 @@
 		};
 		DEBA57FD1B95D5A300B4DC66 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B21F30B82AD2BCFBD981366 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6309F73E86854C5C82F3C55B /* Pods-dribbbleDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -544,7 +630,7 @@
 		};
 		DEBA57FE1B95D5A300B4DC66 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A8B1CDBA40FFAD086BA1A15 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 272BEB9ED6C1DE5CCEDA805B /* Pods-dribbbleDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -557,6 +643,7 @@
 		};
 		DEBA58001B95D5A300B4DC66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C83D77F73881D6E34B416AA /* Pods-dribbbleDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -576,6 +663,7 @@
 		};
 		DEBA58011B95D5A300B4DC66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 023275711ED859F59CAA7355 /* Pods-dribbbleDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

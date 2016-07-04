@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0104904A6E66B3737E89F93E333177FA001D0B29",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0104904A6E66B3737E89F93E333177FA001D0B29" : 0,
+    "ACBE202494F566A2854549548D86C0C22647123F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "40AE0091-F6AE-48EF-9442-27B826E4F4E6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0104904A6E66B3737E89F93E333177FA001D0B29" : "JSPatch\/",
+    "ACBE202494F566A2854549548D86C0C22647123F" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Demo\/SwiftDemo\/SwiftDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lbencs\/JSPatch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0104904A6E66B3737E89F93E333177FA001D0B29"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.com:lbencs\/Dome.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ACBE202494F566A2854549548D86C0C22647123F"
+    }
+  ]
+}

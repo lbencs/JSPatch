@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CATListViewController: UIViewController {
 	
 	let jsParser: JSParser = JSParser()
 	

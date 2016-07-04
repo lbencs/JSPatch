@@ -1,14 +1,11 @@
 //
 //  AppDelegate.m
-//  dribbbleDemo
+//  OCDome
 //
-//  Created by bang on 15/9/1.
-//  Copyright (c) 2015年 bang. All rights reserved.
-//
-
+//  Created by lbencs on 7/5/16.
+//  Copyright © 2016 lbencs. All rights reserved.
 #import "AppDelegate.h"
 #import "JPEngine.h"
-
 @interface AppDelegate ()
 
 @end
@@ -17,21 +14,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
     [JPEngine startEngine];
-    NSString *sourcePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"dribbble/main.js"];
-    [JPEngine evaluateScriptWithPath:sourcePath];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
+    [JPEngine evaluateScriptWithPath:path];
     
-    [self initRootViewController];
+    self.window.rootViewController = [[UIViewController alloc] init];
+    
+    [self configRootViewController];
+    
     return YES;
 }
-
-- (void)initRootViewController
-{
-    NSLog(@"test");
+- (void)configRootViewController{
+    NSLog(@"log------------configRootViewController");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

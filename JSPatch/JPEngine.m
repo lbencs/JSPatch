@@ -536,7 +536,7 @@ static NSDictionary *defineClass(NSString *classDeclaration, JSValue *instanceMe
                 }
                 if (!overrided) {
                     if (![[jsMethodName substringToIndex:1] isEqualToString:@"_"]) {
-                        //判断方法是否为'_'开头
+                        //判断方法是否为'_'
                         NSMutableString *typeDescStr = [@"@@:" mutableCopy];
                         for (int i = 0; i < numberOfArg; i ++) {
                             [typeDescStr appendString:@"@"];

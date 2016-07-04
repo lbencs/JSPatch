@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55978E501D2AC47500079BE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E4F1D2AC47500079BE0 /* main.m */; };
+		55978E531D2AC47500079BE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E521D2AC47500079BE0 /* AppDelegate.m */; };
+		55978E5B1D2AC47500079BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55978E5A1D2AC47500079BE0 /* Assets.xcassets */; };
+		55978E5E1D2AC47500079BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55978E5C1D2AC47500079BE0 /* LaunchScreen.storyboard */; };
+		55978E691D2AC47600079BE0 /* OCDomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E681D2AC47600079BE0 /* OCDomeTests.m */; };
+		55978E741D2AC47600079BE0 /* OCDomeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E731D2AC47600079BE0 /* OCDomeUITests.m */; };
+		55978EAA1D2AC4A600079BE0 /* JPCGBitmapContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E841D2AC4A600079BE0 /* JPCGBitmapContext.m */; };
+		55978EAB1D2AC4A600079BE0 /* JPCGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E861D2AC4A600079BE0 /* JPCGColor.m */; };
+		55978EAC1D2AC4A600079BE0 /* JPCGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E881D2AC4A600079BE0 /* JPCGContext.m */; };
+		55978EAD1D2AC4A600079BE0 /* JPCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E8A1D2AC4A600079BE0 /* JPCGGeometry.m */; };
+		55978EAE1D2AC4A600079BE0 /* JPCGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E8C1D2AC4A600079BE0 /* JPCGImage.m */; };
+		55978EAF1D2AC4A600079BE0 /* JPCGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E8E1D2AC4A600079BE0 /* JPCGPath.m */; };
+		55978EB01D2AC4A600079BE0 /* JPCGTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E901D2AC4A600079BE0 /* JPCGTransform.m */; };
+		55978EB11D2AC4A600079BE0 /* JPCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E921D2AC4A600079BE0 /* JPCoreGraphics.m */; };
+		55978EB21D2AC4A600079BE0 /* JPCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E941D2AC4A600079BE0 /* JPCleaner.m */; };
+		55978EB31D2AC4A600079BE0 /* JPLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E961D2AC4A600079BE0 /* JPLocker.m */; };
+		55978EB41D2AC4A600079BE0 /* JPMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E981D2AC4A600079BE0 /* JPMemory.m */; };
+		55978EB51D2AC4A600079BE0 /* JPSpecialInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E9A1D2AC4A600079BE0 /* JPSpecialInit.m */; };
+		55978EB61D2AC4A600079BE0 /* JPStructPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E9C1D2AC4A600079BE0 /* JPStructPointer.m */; };
+		55978EB71D2AC4A600079BE0 /* JPUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978E9F1D2AC4A600079BE0 /* JPUIGeometry.m */; };
+		55978EB81D2AC4A600079BE0 /* JPUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978EA11D2AC4A600079BE0 /* JPUIGraphics.m */; };
+		55978EB91D2AC4A600079BE0 /* JPUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978EA31D2AC4A600079BE0 /* JPUIImage.m */; };
+		55978EBA1D2AC4A600079BE0 /* JPUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978EA51D2AC4A600079BE0 /* JPUIKit.m */; };
+		55978EBB1D2AC4A600079BE0 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 55978EA81D2AC4A600079BE0 /* JPEngine.m */; };
+		55978EBC1D2AC4A600079BE0 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 55978EA91D2AC4A600079BE0 /* JSPatch.js */; };
+		55978EC01D2AC4CA00079BE0 /* CATListViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 55978EBE1D2AC4CA00079BE0 /* CATListViewController.js */; };
+		55978EC11D2AC4CA00079BE0 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 55978EBF1D2AC4CA00079BE0 /* main.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55978E651D2AC47600079BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55978E431D2AC47500079BE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55978E4A1D2AC47500079BE0;
+			remoteInfo = OCDome;
+		};
+		55978E701D2AC47600079BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55978E431D2AC47500079BE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55978E4A1D2AC47500079BE0;
+			remoteInfo = OCDome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55978E4B1D2AC47500079BE0 /* OCDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55978E4F1D2AC47500079BE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55978E511D2AC47500079BE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55978E521D2AC47500079BE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55978E5A1D2AC47500079BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55978E5D1D2AC47500079BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55978E5F1D2AC47500079BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55978E641D2AC47600079BE0 /* OCDomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCDomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55978E681D2AC47600079BE0 /* OCDomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDomeTests.m; sourceTree = "<group>"; };
+		55978E6A1D2AC47600079BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55978E6F1D2AC47600079BE0 /* OCDomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCDomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55978E731D2AC47600079BE0 /* OCDomeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDomeUITests.m; sourceTree = "<group>"; };
+		55978E751D2AC47600079BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55978E831D2AC4A600079BE0 /* JPCGBitmapContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGBitmapContext.h; sourceTree = "<group>"; };
+		55978E841D2AC4A600079BE0 /* JPCGBitmapContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGBitmapContext.m; sourceTree = "<group>"; };
+		55978E851D2AC4A600079BE0 /* JPCGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGColor.h; sourceTree = "<group>"; };
+		55978E861D2AC4A600079BE0 /* JPCGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGColor.m; sourceTree = "<group>"; };
+		55978E871D2AC4A600079BE0 /* JPCGContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGContext.h; sourceTree = "<group>"; };
+		55978E881D2AC4A600079BE0 /* JPCGContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGContext.m; sourceTree = "<group>"; };
+		55978E891D2AC4A600079BE0 /* JPCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGGeometry.h; sourceTree = "<group>"; };
+		55978E8A1D2AC4A600079BE0 /* JPCGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGGeometry.m; sourceTree = "<group>"; };
+		55978E8B1D2AC4A600079BE0 /* JPCGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGImage.h; sourceTree = "<group>"; };
+		55978E8C1D2AC4A600079BE0 /* JPCGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGImage.m; sourceTree = "<group>"; };
+		55978E8D1D2AC4A600079BE0 /* JPCGPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGPath.h; sourceTree = "<group>"; };
+		55978E8E1D2AC4A600079BE0 /* JPCGPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGPath.m; sourceTree = "<group>"; };
+		55978E8F1D2AC4A600079BE0 /* JPCGTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGTransform.h; sourceTree = "<group>"; };
+		55978E901D2AC4A600079BE0 /* JPCGTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGTransform.m; sourceTree = "<group>"; };
+		55978E911D2AC4A600079BE0 /* JPCoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCoreGraphics.h; sourceTree = "<group>"; };
+		55978E921D2AC4A600079BE0 /* JPCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCoreGraphics.m; sourceTree = "<group>"; };
+		55978E931D2AC4A600079BE0 /* JPCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCleaner.h; sourceTree = "<group>"; };
+		55978E941D2AC4A600079BE0 /* JPCleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCleaner.m; sourceTree = "<group>"; };
+		55978E951D2AC4A600079BE0 /* JPLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLocker.h; sourceTree = "<group>"; };
+		55978E961D2AC4A600079BE0 /* JPLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLocker.m; sourceTree = "<group>"; };
+		55978E971D2AC4A600079BE0 /* JPMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPMemory.h; sourceTree = "<group>"; };
+		55978E981D2AC4A600079BE0 /* JPMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPMemory.m; sourceTree = "<group>"; };
+		55978E991D2AC4A600079BE0 /* JPSpecialInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSpecialInit.h; sourceTree = "<group>"; };
+		55978E9A1D2AC4A600079BE0 /* JPSpecialInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSpecialInit.m; sourceTree = "<group>"; };
+		55978E9B1D2AC4A600079BE0 /* JPStructPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPStructPointer.h; sourceTree = "<group>"; };
+		55978E9C1D2AC4A600079BE0 /* JPStructPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPStructPointer.m; sourceTree = "<group>"; };
+		55978E9E1D2AC4A600079BE0 /* JPUIGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIGeometry.h; sourceTree = "<group>"; };
+		55978E9F1D2AC4A600079BE0 /* JPUIGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIGeometry.m; sourceTree = "<group>"; };
+		55978EA01D2AC4A600079BE0 /* JPUIGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIGraphics.h; sourceTree = "<group>"; };
+		55978EA11D2AC4A600079BE0 /* JPUIGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIGraphics.m; sourceTree = "<group>"; };
+		55978EA21D2AC4A600079BE0 /* JPUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIImage.h; sourceTree = "<group>"; };
+		55978EA31D2AC4A600079BE0 /* JPUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIImage.m; sourceTree = "<group>"; };
+		55978EA41D2AC4A600079BE0 /* JPUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUIKit.h; sourceTree = "<group>"; };
+		55978EA51D2AC4A600079BE0 /* JPUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIKit.m; sourceTree = "<group>"; };
+		55978EA71D2AC4A600079BE0 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		55978EA81D2AC4A600079BE0 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		55978EA91D2AC4A600079BE0 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		55978EBE1D2AC4CA00079BE0 /* CATListViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CATListViewController.js; sourceTree = "<group>"; };
+		55978EBF1D2AC4CA00079BE0 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55978E481D2AC47500079BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55978E611D2AC47600079BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55978E6C1D2AC47600079BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55978E421D2AC47500079BE0 = {
+			isa = PBXGroup;
+			children = (
+				55978E4D1D2AC47500079BE0 /* OCDome */,
+				55978E671D2AC47600079BE0 /* OCDomeTests */,
+				55978E721D2AC47600079BE0 /* OCDomeUITests */,
+				55978E4C1D2AC47500079BE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55978E4C1D2AC47500079BE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55978E4B1D2AC47500079BE0 /* OCDome.app */,
+				55978E641D2AC47600079BE0 /* OCDomeTests.xctest */,
+				55978E6F1D2AC47600079BE0 /* OCDomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55978E4D1D2AC47500079BE0 /* OCDome */ = {
+			isa = PBXGroup;
+			children = (
+				55978EBD1D2AC4CA00079BE0 /* js */,
+				55978E811D2AC4A600079BE0 /* Extensions */,
+				55978EA61D2AC4A600079BE0 /* JSPatch */,
+				55978E511D2AC47500079BE0 /* AppDelegate.h */,
+				55978E521D2AC47500079BE0 /* AppDelegate.m */,
+				55978E5A1D2AC47500079BE0 /* Assets.xcassets */,
+				55978E5C1D2AC47500079BE0 /* LaunchScreen.storyboard */,
+				55978E5F1D2AC47500079BE0 /* Info.plist */,
+				55978E4E1D2AC47500079BE0 /* Supporting Files */,
+			);
+			path = OCDome;
+			sourceTree = "<group>";
+		};
+		55978E4E1D2AC47500079BE0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55978E4F1D2AC47500079BE0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55978E671D2AC47600079BE0 /* OCDomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				55978E681D2AC47600079BE0 /* OCDomeTests.m */,
+				55978E6A1D2AC47600079BE0 /* Info.plist */,
+			);
+			path = OCDomeTests;
+			sourceTree = "<group>";
+		};
+		55978E721D2AC47600079BE0 /* OCDomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55978E731D2AC47600079BE0 /* OCDomeUITests.m */,
+				55978E751D2AC47600079BE0 /* Info.plist */,
+			);
+			path = OCDomeUITests;
+			sourceTree = "<group>";
+		};
+		55978E811D2AC4A600079BE0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55978E821D2AC4A600079BE0 /* CoreGraphics */,
+				55978E931D2AC4A600079BE0 /* JPCleaner.h */,
+				55978E941D2AC4A600079BE0 /* JPCleaner.m */,
+				55978E951D2AC4A600079BE0 /* JPLocker.h */,
+				55978E961D2AC4A600079BE0 /* JPLocker.m */,
+				55978E971D2AC4A600079BE0 /* JPMemory.h */,
+				55978E981D2AC4A600079BE0 /* JPMemory.m */,
+				55978E991D2AC4A600079BE0 /* JPSpecialInit.h */,
+				55978E9A1D2AC4A600079BE0 /* JPSpecialInit.m */,
+				55978E9B1D2AC4A600079BE0 /* JPStructPointer.h */,
+				55978E9C1D2AC4A600079BE0 /* JPStructPointer.m */,
+				55978E9D1D2AC4A600079BE0 /* UIKit */,
+			);
+			name = Extensions;
+			path = ../../../Extensions;
+			sourceTree = "<group>";
+		};
+		55978E821D2AC4A600079BE0 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				55978E831D2AC4A600079BE0 /* JPCGBitmapContext.h */,
+				55978E841D2AC4A600079BE0 /* JPCGBitmapContext.m */,
+				55978E851D2AC4A600079BE0 /* JPCGColor.h */,
+				55978E861D2AC4A600079BE0 /* JPCGColor.m */,
+				55978E871D2AC4A600079BE0 /* JPCGContext.h */,
+				55978E881D2AC4A600079BE0 /* JPCGContext.m */,
+				55978E891D2AC4A600079BE0 /* JPCGGeometry.h */,
+				55978E8A1D2AC4A600079BE0 /* JPCGGeometry.m */,
+				55978E8B1D2AC4A600079BE0 /* JPCGImage.h */,
+				55978E8C1D2AC4A600079BE0 /* JPCGImage.m */,
+				55978E8D1D2AC4A600079BE0 /* JPCGPath.h */,
+				55978E8E1D2AC4A600079BE0 /* JPCGPath.m */,
+				55978E8F1D2AC4A600079BE0 /* JPCGTransform.h */,
+				55978E901D2AC4A600079BE0 /* JPCGTransform.m */,
+				55978E911D2AC4A600079BE0 /* JPCoreGraphics.h */,
+				55978E921D2AC4A600079BE0 /* JPCoreGraphics.m */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		55978E9D1D2AC4A600079BE0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				55978E9E1D2AC4A600079BE0 /* JPUIGeometry.h */,
+				55978E9F1D2AC4A600079BE0 /* JPUIGeometry.m */,
+				55978EA01D2AC4A600079BE0 /* JPUIGraphics.h */,
+				55978EA11D2AC4A600079BE0 /* JPUIGraphics.m */,
+				55978EA21D2AC4A600079BE0 /* JPUIImage.h */,
+				55978EA31D2AC4A600079BE0 /* JPUIImage.m */,
+				55978EA41D2AC4A600079BE0 /* JPUIKit.h */,
+				55978EA51D2AC4A600079BE0 /* JPUIKit.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		55978EA61D2AC4A600079BE0 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				55978EA71D2AC4A600079BE0 /* JPEngine.h */,
+				55978EA81D2AC4A600079BE0 /* JPEngine.m */,
+				55978EA91D2AC4A600079BE0 /* JSPatch.js */,
+			);
+			name = JSPatch;
+			path = ../../../JSPatch;
+			sourceTree = "<group>";
+		};
+		55978EBD1D2AC4CA00079BE0 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				55978EBE1D2AC4CA00079BE0 /* CATListViewController.js */,
+				55978EBF1D2AC4CA00079BE0 /* main.js */,
+			);
+			name = js;
+			path = ../../Dome/Dome/js;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55978E4A1D2AC47500079BE0 /* OCDome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55978E781D2AC47600079BE0 /* Build configuration list for PBXNativeTarget "OCDome" */;
+			buildPhases = (
+				55978E471D2AC47500079BE0 /* Sources */,
+				55978E481D2AC47500079BE0 /* Frameworks */,
+				55978E491D2AC47500079BE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCDome;
+			productName = OCDome;
+			productReference = 55978E4B1D2AC47500079BE0 /* OCDome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55978E631D2AC47600079BE0 /* OCDomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55978E7B1D2AC47600079BE0 /* Build configuration list for PBXNativeTarget "OCDomeTests" */;
+			buildPhases = (
+				55978E601D2AC47600079BE0 /* Sources */,
+				55978E611D2AC47600079BE0 /* Frameworks */,
+				55978E621D2AC47600079BE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55978E661D2AC47600079BE0 /* PBXTargetDependency */,
+			);
+			name = OCDomeTests;
+			productName = OCDomeTests;
+			productReference = 55978E641D2AC47600079BE0 /* OCDomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55978E6E1D2AC47600079BE0 /* OCDomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55978E7E1D2AC47600079BE0 /* Build configuration list for PBXNativeTarget "OCDomeUITests" */;
+			buildPhases = (
+				55978E6B1D2AC47600079BE0 /* Sources */,
+				55978E6C1D2AC47600079BE0 /* Frameworks */,
+				55978E6D1D2AC47600079BE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55978E711D2AC47600079BE0 /* PBXTargetDependency */,
+			);
+			name = OCDomeUITests;
+			productName = OCDomeUITests;
+			productReference = 55978E6F1D2AC47600079BE0 /* OCDomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55978E431D2AC47500079BE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lbencs;
+				TargetAttributes = {
+					55978E4A1D2AC47500079BE0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8J45U9R8VX;
+					};
+					55978E631D2AC47600079BE0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8J45U9R8VX;
+						TestTargetID = 55978E4A1D2AC47500079BE0;
+					};
+					55978E6E1D2AC47600079BE0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8J45U9R8VX;
+						TestTargetID = 55978E4A1D2AC47500079BE0;
+					};
+				};
+			};
+			buildConfigurationList = 55978E461D2AC47500079BE0 /* Build configuration list for PBXProject "OCDome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55978E421D2AC47500079BE0;
+			productRefGroup = 55978E4C1D2AC47500079BE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55978E4A1D2AC47500079BE0 /* OCDome */,
+				55978E631D2AC47600079BE0 /* OCDomeTests */,
+				55978E6E1D2AC47600079BE0 /* OCDomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55978E491D2AC47500079BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55978E5E1D2AC47500079BE0 /* LaunchScreen.storyboard in Resources */,
+				55978E5B1D2AC47500079BE0 /* Assets.xcassets in Resources */,
+				55978EC01D2AC4CA00079BE0 /* CATListViewController.js in Resources */,
+				55978EBC1D2AC4A600079BE0 /* JSPatch.js in Resources */,
+				55978EC11D2AC4CA00079BE0 /* main.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55978E621D2AC47600079BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55978E6D1D2AC47600079BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55978E471D2AC47500079BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55978EBB1D2AC4A600079BE0 /* JPEngine.m in Sources */,
+				55978EAF1D2AC4A600079BE0 /* JPCGPath.m in Sources */,
+				55978EB31D2AC4A600079BE0 /* JPLocker.m in Sources */,
+				55978EB71D2AC4A600079BE0 /* JPUIGeometry.m in Sources */,
+				55978EAB1D2AC4A600079BE0 /* JPCGColor.m in Sources */,
+				55978EBA1D2AC4A600079BE0 /* JPUIKit.m in Sources */,
+				55978EB51D2AC4A600079BE0 /* JPSpecialInit.m in Sources */,
+				55978EB21D2AC4A600079BE0 /* JPCleaner.m in Sources */,
+				55978EAA1D2AC4A600079BE0 /* JPCGBitmapContext.m in Sources */,
+				55978EB81D2AC4A600079BE0 /* JPUIGraphics.m in Sources */,
+				55978EB41D2AC4A600079BE0 /* JPMemory.m in Sources */,
+				55978EB01D2AC4A600079BE0 /* JPCGTransform.m in Sources */,
+				55978EAD1D2AC4A600079BE0 /* JPCGGeometry.m in Sources */,
+				55978EB11D2AC4A600079BE0 /* JPCoreGraphics.m in Sources */,
+				55978E531D2AC47500079BE0 /* AppDelegate.m in Sources */,
+				55978EB61D2AC4A600079BE0 /* JPStructPointer.m in Sources */,
+				55978EAE1D2AC4A600079BE0 /* JPCGImage.m in Sources */,
+				55978E501D2AC47500079BE0 /* main.m in Sources */,
+				55978EAC1D2AC4A600079BE0 /* JPCGContext.m in Sources */,
+				55978EB91D2AC4A600079BE0 /* JPUIImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55978E601D2AC47600079BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55978E691D2AC47600079BE0 /* OCDomeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55978E6B1D2AC47600079BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55978E741D2AC47600079BE0 /* OCDomeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55978E661D2AC47600079BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55978E4A1D2AC47500079BE0 /* OCDome */;
+			targetProxy = 55978E651D2AC47600079BE0 /* PBXContainerItemProxy */;
+		};
+		55978E711D2AC47600079BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55978E4A1D2AC47500079BE0 /* OCDome */;
+			targetProxy = 55978E701D2AC47600079BE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55978E5C1D2AC47500079BE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55978E5D1D2AC47500079BE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55978E761D2AC47600079BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55978E771D2AC47600079BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55978E791D2AC47600079BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OCDome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.OCDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55978E7A1D2AC47600079BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OCDome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.OCDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		55978E7C1D2AC47600079BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OCDomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.OCDomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCDome.app/OCDome";
+			};
+			name = Debug;
+		};
+		55978E7D1D2AC47600079BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OCDomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.OCDomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCDome.app/OCDome";
+			};
+			name = Release;
+		};
+		55978E7F1D2AC47600079BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OCDomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.OCDomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OCDome;
+			};
+			name = Debug;
+		};
+		55978E801D2AC47600079BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OCDomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.acctrsf.OCDomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OCDome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55978E461D2AC47500079BE0 /* Build configuration list for PBXProject "OCDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55978E761D2AC47600079BE0 /* Debug */,
+				55978E771D2AC47600079BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55978E781D2AC47600079BE0 /* Build configuration list for PBXNativeTarget "OCDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55978E791D2AC47600079BE0 /* Debug */,
+				55978E7A1D2AC47600079BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55978E7B1D2AC47600079BE0 /* Build configuration list for PBXNativeTarget "OCDomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55978E7C1D2AC47600079BE0 /* Debug */,
+				55978E7D1D2AC47600079BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55978E7E1D2AC47600079BE0 /* Build configuration list for PBXNativeTarget "OCDomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55978E7F1D2AC47600079BE0 /* Debug */,
+				55978E801D2AC47600079BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55978E431D2AC47500079BE0 /* Project object */;
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0104904A6E66B3737E89F93E333177FA001D0B29",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0104904A6E66B3737E89F93E333177FA001D0B29" : 0,
+    "ACBE202494F566A2854549548D86C0C22647123F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14FD3B07-28CF-43C9-8F8E-4735BDDB6139",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0104904A6E66B3737E89F93E333177FA001D0B29" : "JSPatch\/",
+    "ACBE202494F566A2854549548D86C0C22647123F" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "dribbbleDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Demo\/DribbbleDemo\/dribbbleDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lbencs\/JSPatch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0104904A6E66B3737E89F93E333177FA001D0B29"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.com:lbencs\/Dome.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ACBE202494F566A2854549548D86C0C22647123F"
+    }
+  ]
+}

@@ -14,12 +14,14 @@ class JSParser: NSObject {
 	let jsContext = JSContext()
 	
 	func parser() -> Void {
-		self.simpleTransferFromObjcToJs()
-		self.simpleTransferFromJsToObjc()
 		
+        self.simpleTransferFromObjcToJs()
+		
+        self.simpleTransferFromJsToObjc()
 		
 	}
 	
+    
 	func simpleTransferFromJsToObjc() -> Void {
 		
 		func sendMessage(message: String) -> String{
@@ -35,6 +37,7 @@ class JSParser: NSObject {
 		
 	}
 	
+    
 	func simpleTransferFromObjcToJs() -> Void {
 		
 		let script =
