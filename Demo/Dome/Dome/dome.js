@@ -1,38 +1,91 @@
 
-require('UITableView,UIView,UIColor,UITableViewCell,NSIndexPath')
+require('UIViewController,UITableView,UIView,UIColor,UITableViewCell,NSIndexPath')
 
-defineClass('Dome.ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>',{
+require('JPEngine').addExtensions(['JPMemory'])
+
+defineClass('Dome.ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>', ['tableView'],{
 			
+            init: function(){
+            self = self.super().init();
+            if(self) {
+                //do some
+            }
+            return self;
+            },
+            
 			viewDidLoad: function() {
-			
-			console.log('js viewDidLoad begin')
-			self.ORIGviewDidLoad()
-			var mainView = self.super().view()
-			
-			mainView.setBackgroundColor(UIColor.redColor())
-			
-			var tableView = UITableView.alloc().initWithFrame({x:105, y:0, width:100, height:200})
-			tableView.setDelegate(self)
-			tableView.setDataSource(self)
-			tableView.setBackgroundColor(UIColor.yellowColor())
-			tableView.registerClass_forCellReuseIdentifier(UITableViewCell.class(),
-														   "TableViewCell")
-			mainView.addSubview(tableView)
-			self.setTableView(tableView)
-			tableView.reloadData()
-			
-			var subView = UIView.alloc().initWithFrame({x:0, y:0, width:100, height:200})
-			subView.setBackgroundColor(UIColor.greenColor())
-			console.log(mainView)
-			console.log(subView)
-			mainView.addSubview(subView)
-			
-			console.log('js viewDidLoad end')
-			
+            console.log('js viewDidLoad begin');
+            self.makeup();
+            
+            var weakself = __weak(self);
+            dispatch_after(1.0, function() {
+                           var strongself = __strong(weakself);
+                           strongself.showAlert();
+                           }),
+            self.testJPMemory()
+            console.log('js viewDidLoad end');
 			},
+            
+            
+            testJPMemory: function() {
+            
+            console.log("test------JPMemory");
+            
+            var pError = malloc(sizeof("NSError"));
+            
+            self.testErrorPoint(pError);
+            
+            
+            console.log("pError : start");
+            console.log(pError)
+            console.log("pError : end");
+            
+            var error = pval(pError);
+            
+            console.log("start");
+            console.log(error);
+            console.log("end");
+            
+            if(!error) {
+            console.log("success");
+            }else{
+            console.log(error);
+            }
+            releaseTmpObj(pError)
+            free(pError)
+
+            
+            console.log("test------JPMemory");
+            },
+            
+            testErrorPoint: function(error) {
+            var tmp = require('NSError').errorWithDomain_code_userInfo("test.com",10012,null);
+            var newErrorPointer = getPointer(tmp);
+            memcpy(error, newErrorPointer, sizeof('id'))
+            },
+            
+            
+            makeup: function() {
+            
+            self.ORIGviewDidLoad()
+            var mainView = self.super().view()
+            mainView.setBackgroundColor(UIColor.redColor())
+            
+            var tableView = UITableView.alloc().initWithFrame({x:0, y:0, width:mainView.frame().width, height:mainView.frame().height})
+            tableView.setDelegate(self)
+            tableView.setDataSource(self)
+            tableView.setBackgroundColor(UIColor.yellowColor())
+            tableView.registerClass_forCellReuseIdentifier(UITableViewCell.class(),"TableViewCell")
+            mainView.addSubview(tableView)
+            self.setTableView(tableView)
+            tableView.reloadData()
+            
+            },
+            
+//            UITableViewDelegate && UITableSource
 			
 			tableView_numberOfRowsInSection: function(tableView, section){
-			return 13
+			return 23
 			},
 			
 			tableView_heightForRowAtIndexPath: function(tableView, indexPath){
@@ -43,6 +96,17 @@ defineClass('Dome.ViewController : UIViewController<UITableViewDelegate,UITableV
 			var cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell")
 			cell.textLabel().setText("hahaha")
 			return cell
-			}
-			
+			},
+            
+            tableView_didSelectRowAtIndexPath: function(tableView, indexPath){
+            console.log("message");
+            var nextVC = UIViewController.alloc().init();
+            nextVC.setTitle("NextPage")
+            nextVC.view().setBackgroundColor(UIColor.whiteColor());
+            self.navigationController().pushViewController_animated(nextVC,true);
+            console.log(nextVC);
+            },
+            
 			})
+
+

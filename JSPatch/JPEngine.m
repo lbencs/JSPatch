@@ -488,12 +488,14 @@ static NSDictionary *defineClass(NSString *classDeclaration, JSValue *instanceMe
             _exceptionBlock([NSString stringWithFormat:@"can't find the super class %@", superClassName]);
             return @{@"cls": className};
         }
+        //如果class不存在，就创建一个新的类
         cls = objc_allocateClassPair(superCls, className.UTF8String, 0);
         objc_registerClassPair(cls);
     }
     
     if (protocols.count > 0) {
         for (NSString* protocolName in protocols) {
+            //添加协议方法
             Protocol *protocol = objc_getProtocol([trim(protocolName) cStringUsingEncoding:NSUTF8StringEncoding]);
             class_addProtocol (cls, protocol);
         }
@@ -502,24 +504,27 @@ static NSDictionary *defineClass(NSString *classDeclaration, JSValue *instanceMe
     for (int i = 0; i < 2; i ++) {
         BOOL isInstance = i == 0;
         JSValue *jsMethods = isInstance ? instanceMethods: classMethods;
-        
+        //类方法、对象方法
         Class currCls = isInstance ? cls: objc_getMetaClass(className.UTF8String);
         NSDictionary *methodDict = [jsMethods toDictionary];
         for (NSString *jsMethodName in methodDict.allKeys) {
             JSValue *jsMethodArr = [jsMethods valueForProperty:jsMethodName];
             int numberOfArg = [jsMethodArr[0] toInt32];
             NSString *selectorName = convertJPSelectorString(jsMethodName);
-            
+            //将JS方法转变为OC的方法
             if ([selectorName componentsSeparatedByString:@":"].count - 1 < numberOfArg) {
                 selectorName = [selectorName stringByAppendingString:@":"];
             }
             
             JSValue *jsMethod = jsMethodArr[1];
             if (class_respondsToSelector(currCls, NSSelectorFromString(selectorName))) {
+                //如果方法本身在OC中有实现，替换他
                 overrideMethod(currCls, selectorName, jsMethod, !isInstance, NULL);
             } else {
+                //如果没有，
                 BOOL overrided = NO;
                 for (NSString *protocolName in protocols) {
+                    //判断方法是否为Protocol中的方法
                     char *types = methodTypesInProtocol(protocolName, selectorName, isInstance, YES);
                     if (!types) types = methodTypesInProtocol(protocolName, selectorName, isInstance, NO);
                     if (types) {
@@ -531,6 +536,7 @@ static NSDictionary *defineClass(NSString *classDeclaration, JSValue *instanceMe
                 }
                 if (!overrided) {
                     if (![[jsMethodName substringToIndex:1] isEqualToString:@"_"]) {
+                        //判断方法是否为'_'开头
                         NSMutableString *typeDescStr = [@"@@:" mutableCopy];
                         for (int i = 0; i < numberOfArg; i ++) {
                             [typeDescStr appendString:@"@"];
