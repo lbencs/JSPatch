@@ -34,6 +34,7 @@
 		BD1AADAF1CEAB53A005D8CF3 /* DomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AADAE1CEAB53A005D8CF3 /* DomeUITests.swift */; };
 		BD1AADC01CEAB5CE005D8CF3 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AADBE1CEAB5CE005D8CF3 /* JPEngine.m */; };
 		BD1AADC11CEAB5CE005D8CF3 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */; };
+		BD2B4AFD1D2B3DFD00115E1A /* CATRuntimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */; };
 		BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1570C1D2A86B900BC7306 /* JSParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		BD1AADBE1CEAB5CE005D8CF3 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dome-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATRuntimer.swift; sourceTree = "<group>"; };
 		BDC1570C1D2A86B900BC7306 /* JSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +236,7 @@
 				BD1AAD9A1CEAB53A005D8CF3 /* Info.plist */,
 				BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */,
 				BDC1570C1D2A86B900BC7306 /* JSParser.swift */,
+				BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */,
 			);
 			path = Dome;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			files = (
 				55AEB79E1D28FB52009E5FE7 /* JPCGPath.m in Sources */,
 				55268A841D2AB77900F3D19D /* CATListViewController.swift in Sources */,
+				BD2B4AFD1D2B3DFD00115E1A /* CATRuntimer.swift in Sources */,
 				55AEB7A21D28FB52009E5FE7 /* JPLocker.m in Sources */,
 				55AEB7A61D28FB52009E5FE7 /* JPUIGeometry.m in Sources */,
 				55AEB79A1D28FB52009E5FE7 /* JPCGColor.m in Sources */,

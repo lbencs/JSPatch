@@ -20,7 +20,6 @@ class JSParser: NSObject {
         self.simpleTransferFromJsToObjc()
 		
 	}
-	
     
 	func simpleTransferFromJsToObjc() -> Void {
 		

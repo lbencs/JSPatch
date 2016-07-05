@@ -11,6 +11,8 @@ import UIKit
 class CATListViewController: UIViewController {
 	
 	let jsParser: JSParser = JSParser()
+	let runtimer = CATRuntimer()
+	
 	
     override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,6 +23,7 @@ class CATListViewController: UIViewController {
         self.testPointer(&error)
 		
 		jsParser.parser()
+		runtimer.test()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -28,18 +31,14 @@ class CATListViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
-
-	
-	
-	
-	
     func showAlert() -> Void {
-        let alert = UIAlertView()
-        alert.title = "AlertView"
-        alert.message = "AlertMessage"
-        alert.addButtonWithTitle("Calcel")
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+		
+		let alert = UIAlertController(title: "Alert", message: "Alert Message", preferredStyle: .Alert)
+		alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { alert in
+		}))
+		alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { alert in
+		}))
+		self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func testPointer(inout pointer: NSError?) -> Void {

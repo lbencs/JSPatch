@@ -38,25 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.makeKeyAndVisible()
        
-        self.ttt()
         self.configRootViewController()
-        
-        
-        self.window?.rootViewController = CATListViewController()
-        
-        
-        let popTime = dispatch_time(DISPATCH_TIME_NOW,
-                                    Int64(5 * Double(NSEC_PER_SEC))) // 1
-        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { // 2
-          self.configRootViewController()
-        }
-        
+		
+        self.window?.rootViewController = UINavigationController(rootViewController: CATListViewController())
+	
         return true
     }
-    
-    func ttt() -> Void {
-        print("log-----------ttt")
-    }
+	
     func configRootViewController() -> Void {
         print("log-----------configRootViewController")
     }
