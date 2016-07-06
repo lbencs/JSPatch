@@ -91,10 +91,9 @@ struct CATMethod {
 	var typeEncoding: String?
 	var argumentType = [String]()
 	var imp: IMP?
-	
-	
 	var methodDescription: CATMethodDescription?
 }
+
 
 
 /*
@@ -108,9 +107,10 @@ class CATRuntimer: NSObject {
 	{
 		propertyList(Model.classForCoder())
 		
-		dump(self.ivarList(Model.classForCoder()))
-		dump(self.propertyList(Model.classForCoder()))
-		dump(self.methodList(Model.classForCoder()))
+//		dump(self.ivarList(Model.classForCoder()))
+//		dump(self.propertyList(Model.classForCoder()))
+//		dump(self.methodList(Model.classForCoder()))
+        self.dynamicClass()
 	}
 	
 	func property() -> Void
@@ -214,8 +214,24 @@ class CATRuntimer: NSObject {
 	}
 	
 	func dynamicClass() -> Void {
-		//		let TigerClass: AnyClass = objc_allocateClassPair(Animal.self, "Tiger", 0)
-		//		class_addIvar(TigerClass, "tag1", sizeof(String),log2(sizeof(String)), nil)
-		
+        let TigerClass: AnyClass = objc_allocateClassPair(Animal.self, "Tiger", 0)
+        class_addIvar(TigerClass, "ivar1", sizeof(NSObject), UInt8(log2(Double(sizeof(NSObject)))), "@")
+        class_addIvar(TigerClass, "ivar2", sizeof(NSObject), UInt8(log2(Double(sizeof(NSObject)))), "@")
+        class_addIvar(TigerClass, "ivar3", sizeof(NSObject), UInt8(log2(Double(sizeof(NSObject)))), "@")
+        let attribute = objc_property_attribute_t(name: "T".cStringUsingEncoding(NSUTF8StringEncoding), value: "@\"NSString\"".cStringUsingEncoding(NSUTF8StringEncoding))
+//        let ivar = objc_property_
+        
+        class_addProperty(TigerClass, "property1", [attribute], 1)
+        
+//        class_addMethod(<#T##cls: AnyClass!##AnyClass!#>, <#T##name: Selector##Selector#>, <#T##imp: IMP##IMP#>, <#T##types: UnsafePointer<Int8>##UnsafePointer<Int8>#>)
+//        class_addProtocol(<#T##cls: AnyClass!##AnyClass!#>, <#T##protocol: Protocol!##Protocol!#>)
+        objc_object
+        
+        objc_registerClassPair(TigerClass)
+        dump(TigerClass)
+        dump(ivarList(TigerClass))
+        dump(propertyList(TigerClass))
+//        let tiger = TigerClass.alloc()
+//        print(tiger)
 	}
 }

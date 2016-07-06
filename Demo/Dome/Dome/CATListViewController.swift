@@ -18,12 +18,14 @@ class CATListViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
         
-        var error : NSError? = nil
-        
-        self.testPointer(&error)
-		
-		jsParser.parser()
-		runtimer.test()
+//        var error : NSError? = nil
+//        
+//        self.testPointer(&error)
+//		
+//		jsParser.parser()
+		print("----------------runtimer-------------")
+        runtimer.test()
+        print("----------------runtimer-------------")
 	}
 
 	override func didReceiveMemoryWarning() {
