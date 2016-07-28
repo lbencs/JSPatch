@@ -1555,7 +1555,7 @@ static id formatOCToJS(id obj)
     }
     return _wrapObj(obj);
 }
-
+//把JS的对象，转变成对应的OC对象
 static id formatJSToOC(JSValue *jsval)
 {
     id obj = [jsval toObject];

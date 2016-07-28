@@ -10,5 +10,6 @@
 #define Dome_Bridging_Header_h
 
 #import "JPEngine.h"
+#import "NSObject+CATPerformSelecter.h"
 
 #endif /* Dome_Bridging_Header_h */
