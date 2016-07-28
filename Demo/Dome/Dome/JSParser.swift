@@ -35,7 +35,6 @@ class JSParser: NSObject {
 		print(jsContext.evaluateScript("sendMessageToObjc(' Message from js.')"))
 		
 	}
-	
     
 	func simpleTransferFromObjcToJs() -> Void {
 		

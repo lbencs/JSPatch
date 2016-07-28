@@ -27,6 +27,8 @@
 		55AEB7A91D28FB52009E5FE7 /* JPUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AEB7981D28FB52009E5FE7 /* JPUIKit.m */; };
 		55AEB7B01D2AA1B3009E5FE7 /* CATListViewController.js in Resources */ = {isa = PBXBuildFile; fileRef = 55AEB7AF1D2AA1B3009E5FE7 /* CATListViewController.js */; };
 		55AEB7B21D2AA1C3009E5FE7 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 55AEB7B11D2AA1C3009E5FE7 /* main.js */; };
+		55D346AB1D43071A002ED031 /* NSObject+CATPerformSelecter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D346AA1D43071A002ED031 /* NSObject+CATPerformSelecter.m */; };
+		55D346AD1D43080C002ED031 /* CATExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D346AC1D43080C002ED031 /* CATExtensions.swift */; };
 		BD1AAD8F1CEAB53A005D8CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AAD8E1CEAB53A005D8CF3 /* AppDelegate.swift */; };
 		BD1AAD961CEAB53A005D8CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AAD951CEAB53A005D8CF3 /* Assets.xcassets */; };
 		BD1AAD991CEAB53A005D8CF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1AAD971CEAB53A005D8CF3 /* LaunchScreen.storyboard */; };
@@ -93,6 +95,9 @@
 		55AEB7981D28FB52009E5FE7 /* JPUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPUIKit.m; sourceTree = "<group>"; };
 		55AEB7AF1D2AA1B3009E5FE7 /* CATListViewController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CATListViewController.js; sourceTree = "<group>"; };
 		55AEB7B11D2AA1C3009E5FE7 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		55D346A91D43071A002ED031 /* NSObject+CATPerformSelecter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CATPerformSelecter.h"; sourceTree = "<group>"; };
+		55D346AA1D43071A002ED031 /* NSObject+CATPerformSelecter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CATPerformSelecter.m"; sourceTree = "<group>"; };
+		55D346AC1D43080C002ED031 /* CATExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATExtensions.swift; sourceTree = "<group>"; };
 		BD1AAD8B1CEAB53A005D8CF3 /* Dome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AAD8E1CEAB53A005D8CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD1AAD951CEAB53A005D8CF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -237,6 +242,9 @@
 				BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */,
 				BDC1570C1D2A86B900BC7306 /* JSParser.swift */,
 				BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */,
+				55D346A91D43071A002ED031 /* NSObject+CATPerformSelecter.h */,
+				55D346AA1D43071A002ED031 /* NSObject+CATPerformSelecter.m */,
+				55D346AC1D43080C002ED031 /* CATExtensions.swift */,
 			);
 			path = Dome;
 			sourceTree = "<group>";
@@ -412,10 +420,12 @@
 				55AEB7A91D28FB52009E5FE7 /* JPUIKit.m in Sources */,
 				55AEB7A41D28FB52009E5FE7 /* JPSpecialInit.m in Sources */,
 				55AEB7A11D28FB52009E5FE7 /* JPCleaner.m in Sources */,
+				55D346AB1D43071A002ED031 /* NSObject+CATPerformSelecter.m in Sources */,
 				55AEB7991D28FB52009E5FE7 /* JPCGBitmapContext.m in Sources */,
 				BD1AADC01CEAB5CE005D8CF3 /* JPEngine.m in Sources */,
 				55AEB7A71D28FB52009E5FE7 /* JPUIGraphics.m in Sources */,
 				55AEB7A31D28FB52009E5FE7 /* JPMemory.m in Sources */,
+				55D346AD1D43080C002ED031 /* CATExtensions.swift in Sources */,
 				55AEB79F1D28FB52009E5FE7 /* JPCGTransform.m in Sources */,
 				55AEB79C1D28FB52009E5FE7 /* JPCGGeometry.m in Sources */,
 				55AEB7A01D28FB52009E5FE7 /* JPCoreGraphics.m in Sources */,

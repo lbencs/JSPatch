@@ -20,7 +20,7 @@ class DomeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+    //  
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -33,4 +33,14 @@ class DomeTests: XCTestCase {
         }
     }
     
+    func testPerform() {
+        let result = NSObject().at_performSelector(#selector(NSObject.at_testPerformSelecter(_:)), withObject: "Test PerformSelecter:")
+        print(result)
+        XCTAssertNotNil("must return a String")
+    }
+    func testAssociated(){
+        let obj = NSObject()
+        obj.associatedObect = "lben"
+        XCTAssertEqual(obj.associatedObect, "lben")
+    }
 }
