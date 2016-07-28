@@ -8,6 +8,24 @@
 
 import UIKit
 
-class CATMessage: NSObject {
+func Log(aKey: String) -> String{
+	return aKey;
+}
 
+
+class CATMessage: NSObject {
+	func sendMessage() -> Void {
+		Log("jaj")
+	}
+}
+
+extension CATMessage{
+//	var name: String? {
+//		set{
+////			objc_setAssociatedObject(CATMessage.self, #selector(CATMessage.name), <#T##value: AnyObject!##AnyObject!#>, <#T##policy: objc_AssociationPolicy##objc_AssociationPolicy#>)
+//		}
+//		get{
+//		
+//		}
+//	}
 }

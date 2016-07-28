@@ -8,6 +8,7 @@
 
 import Foundation
 import JavaScriptCore
+import UIKit
 
 class JSParser: NSObject {
 	
@@ -30,10 +31,15 @@ class JSParser: NSObject {
 		let sendMessageFromJsToObjc: @convention(block) String -> String = { input in
 			return sendMessage(input)
 		}
+		let showAlertView: @convention(block) String -> Void = { input in
+			UIAlertView(title: "alert", message: "Alert message:"+input, delegate: nil, cancelButtonTitle: "OK").show()
+		}
 		
 		jsContext.setObject(unsafeBitCast(sendMessageFromJsToObjc, AnyObject.self), forKeyedSubscript: "sendMessageToObjc")
-		print(jsContext.evaluateScript("sendMessageToObjc(' Message from js.')"))
+		jsContext.setObject(unsafeBitCast(showAlertView, AnyObject.self), forKeyedSubscript: "sendAlertMessage")
 		
+		print(jsContext.evaluateScript("sendMessageToObjc(' Message from js.')"))
+		jsContext.evaluateScript("sendAlertMessage('This is a alert Message from JS')")
 	}
 	
     

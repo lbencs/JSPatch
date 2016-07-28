@@ -21,8 +21,10 @@ class CATListViewController: UIViewController {
 //        var error : NSError? = nil
 //        
 //        self.testPointer(&error)
-//		
-//		jsParser.parser()
+		//
+		print("----------------parser-------------")
+		jsParser.parser()
+		print("----------------parser-------------")
 		print("----------------runtimer-------------")
         runtimer.test()
         print("----------------runtimer-------------")

@@ -225,7 +225,7 @@ class CATRuntimer: NSObject {
         
 //        class_addMethod(<#T##cls: AnyClass!##AnyClass!#>, <#T##name: Selector##Selector#>, <#T##imp: IMP##IMP#>, <#T##types: UnsafePointer<Int8>##UnsafePointer<Int8>#>)
 //        class_addProtocol(<#T##cls: AnyClass!##AnyClass!#>, <#T##protocol: Protocol!##Protocol!#>)
-        objc_object
+        objc_object()
         
         objc_registerClassPair(TigerClass)
         dump(TigerClass)
