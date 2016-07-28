@@ -11,5 +11,7 @@
 
 #import "JPEngine.h"
 #import "NSObject+CATPerformSelecter.h"
+#import "CATForwardInvocation.h"
+
 
 #endif /* Dome_Bridging_Header_h */

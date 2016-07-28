@@ -32,6 +32,10 @@
 {
     return [self at_performSelector:aSelector withObjects:object orVAList:args hasArgument:YES];
 }
+- (id)at_performSelector:(SEL)aSelector args:(va_list)args
+{
+	return [self at_performSelector:aSelector withObjects:nil orVAList:args hasArgument:YES];
+}
 - (id)at_performSelector:(SEL)aSelector
              withObjects:(id)aObject
                 orVAList:(va_list)args
@@ -45,12 +49,15 @@
     
     if (hasArguments) {
         NSArray *arguments = __argumentsFromValist(args);
-        
-        [invocation setArgument:&aObject atIndex:2];
+		
+		int index = 2;
+		if (aObject) {
+			[invocation setArgument:&aObject atIndex:index++];
+		}
         
         if ([arguments count] > 0) {
             [arguments enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [invocation setArgument:&obj atIndex:idx+3];
+                [invocation setArgument:&obj atIndex:idx+index];
             }];
         }
         [invocation retainArguments];
@@ -110,5 +117,4 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     }
     return result;
 }
-
 @end

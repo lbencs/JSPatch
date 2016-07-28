@@ -13,6 +13,7 @@
 #import <UIKit/UIApplication.h>
 #endif
 
+//包装
 @interface JPBoxing : NSObject
 @property (nonatomic) id obj;
 @property (nonatomic) void *pointer;
@@ -215,7 +216,7 @@ void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
     context[@"_OC_catch"] = ^(JSValue *msg, JSValue *stack) {
         _exceptionBlock([NSString stringWithFormat:@"js exception, \nmsg: %@, \nstack: \n %@", [msg toObject], [stack toObject]]);
     };
-    
+	
     context.exceptionHandler = ^(JSContext *con, JSValue *exception) {
         NSLog(@"%@", exception);
         _exceptionBlock([NSString stringWithFormat:@"js exception: %@", exception]);
@@ -500,7 +501,7 @@ static NSDictionary *defineClass(NSString *classDeclaration, JSValue *instanceMe
             class_addProtocol (cls, protocol);
         }
     }
-    
+    //对js中实现了的类方法、对象方法进行 与原App方法进行处理
     for (int i = 0; i < 2; i ++) {
         BOOL isInstance = i == 0;
         JSValue *jsMethods = isInstance ? instanceMethods: classMethods;
@@ -549,14 +550,14 @@ static NSDictionary *defineClass(NSString *classDeclaration, JSValue *instanceMe
     }
     
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic ignored "-Wundeclared-selector" //Association
     class_addMethod(cls, @selector(getProp:), (IMP)getPropIMP, "@@:@");
     class_addMethod(cls, @selector(setProp:forKey:), (IMP)setPropIMP, "v@:@@");
 #pragma clang diagnostic pop
 
     return @{@"cls": className, @"superCls": superClassName};
 }
-
+//通过OC方获取JS中实现的方法
 static JSValue *getJSFunctionInObjectHierachy(id slf, NSString *selectorName)
 {
     Class cls = object_getClass(slf);
@@ -565,7 +566,7 @@ static JSValue *getJSFunctionInObjectHierachy(id slf, NSString *selectorName)
         selectorName = [selectorName stringByReplacingOccurrencesOfString:@"_JPSUPER_" withString:@"_JP"];
     }
     JSValue *func = _JSOverideMethods[cls][selectorName];
-    while (!func) {
+    while (!func) { //如果不存在，就去父类中寻找
         cls = class_getSuperclass(cls);
         if (!cls) {
             return nil;
@@ -840,7 +841,7 @@ static void JPForwardInvocation(__unsafe_unretained id assignSlf, SEL selector, 
         originalDealloc(assignSlf, NSSelectorFromString(@"dealloc"));
     }
 }
-
+//
 static void JPExcuteORIGForwardInvocation(id slf, SEL selector, NSInvocation *invocation)
 {
 #pragma clang diagnostic push
@@ -862,6 +863,7 @@ static void JPExcuteORIGForwardInvocation(id slf, SEL selector, NSInvocation *in
         [forwardInv invoke];
         
     } else {
+		//如果当前类没有实现ORIGforwardInvocation这个方法，就调用其父类的forwardInvocation方法
         NSString *superForwardName = @"JPSUPER_ForwardInvocation";
         SEL superForwardSelector = NSSelectorFromString(superForwardName);
         
@@ -917,12 +919,12 @@ static void overrideMethod(Class cls, NSString *selectorName, JSValue *function,
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     if (class_getMethodImplementation(cls, @selector(forwardInvocation:)) != (IMP)JPForwardInvocation) {
-        IMP originalForwardImp = class_replaceMethod(cls, @selector(forwardInvocation:), (IMP)JPForwardInvocation, "v@:@");
+        IMP originalForwardImp = class_replaceMethod(cls, @selector(forwardInvocation:), (IMP)JPForwardInvocation, "v@:@");//保存forwardInvocation函数原有的实现方法，以便在没有被替换的函数的时候，重新调用原有实现
         class_addMethod(cls, @selector(ORIGforwardInvocation:), originalForwardImp, "v@:@");
     }
 #pragma clang diagnostic pop
 
-    if (class_respondsToSelector(cls, selector)) {
+    if (class_respondsToSelector(cls, selector)) { //如果selector在原有类中有实现，就保留
         NSString *originalSelectorName = [NSString stringWithFormat:@"ORIG%@", selectorName];
         SEL originalSelector = NSSelectorFromString(originalSelectorName);
         if(!class_respondsToSelector(cls, originalSelector)) {
@@ -931,7 +933,7 @@ static void overrideMethod(Class cls, NSString *selectorName, JSValue *function,
     }
     
     NSString *JPSelectorName = [NSString stringWithFormat:@"_JP%@", selectorName];
-    
+    //注册替代方法
     _initJPOverideMethods(cls);
     _JSOverideMethods[cls][JPSelectorName] = function;
     
@@ -962,7 +964,7 @@ static id callSelector(NSString *className, NSString *selectorName, JSValue *arg
     SEL selector = NSSelectorFromString(selectorName);
     
     NSString *superClassName = nil;
-    if (isSuper) {
+    if (isSuper) {//这个方法是调用的父类还是子类
         NSString *superSelectorName = [NSString stringWithFormat:@"SUPER_%@", selectorName];
         SEL superSelector = NSSelectorFromString(superSelectorName);
         
@@ -981,7 +983,7 @@ static id callSelector(NSString *className, NSString *selectorName, JSValue *arg
         
         NSString *JPSelectorName = [NSString stringWithFormat:@"_JP%@", selectorName];
         JSValue *overideFunction = _JSOverideMethods[superCls][JPSelectorName];
-        if (overideFunction) {
+        if (overideFunction) {  //如果这个方法有替换
             overrideMethod(cls, superSelectorName, overideFunction, NO, NULL);
         }
         
@@ -1541,7 +1543,7 @@ static NSString *convertJPSelectorString(NSString *selectorString)
 }
 
 #pragma mark - Object format
-
+//把OC的对象转成JS的对象
 static id formatOCToJS(id obj)
 {
     if ([obj isKindOfClass:[NSString class]] || [obj isKindOfClass:[NSDictionary class]] || [obj isKindOfClass:[NSArray class]] || [obj isKindOfClass:[NSDate class]]) {

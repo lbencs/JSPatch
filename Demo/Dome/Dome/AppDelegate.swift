@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #else
             JPEngine.evaluateScriptWithPath(sourcePath)
         #endif
-        
-        
+
+		
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.makeKeyAndVisible()
        

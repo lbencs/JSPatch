@@ -34,13 +34,32 @@ class DomeTests: XCTestCase {
     }
     
     func testPerform() {
-        let result = NSObject().at_performSelector(#selector(NSObject.at_testPerformSelecter(_:)), withObject: "Test PerformSelecter:")
-        print(result)
-        XCTAssertNotNil("must return a String")
+		XCTAssertNotNil(NSObject().at_performSelector(#selector(NSObject.at_testPerformSelecter(_:)), withObject: "Test PerformSelecter:"))
+		XCTAssertNotNil(CATForwardInvocation().at_perfomSelecter(#selector(CATForwardInvocation.testFunction(_:from:)), withObjects: "message","from"))
     }
-    func testAssociated(){
+	
+	func testAssociated(){
         let obj = NSObject()
         obj.associatedObect = "lben"
         XCTAssertEqual(obj.associatedObect, "lben")
     }
+	
+	func testForwardInvocation() {
+		XCTAssertTrue(CATForwardInvocation().respondsToSelector(#selector(CATForwardInvocation.testFunction(_:))))
+	}
+
+	func testSwizzleForwardInvocation() {
+		
+		let invocation: AnyObject = CATForwardInvocation()
+		
+		invocation.swizzle()
+		
+		XCTAssertTrue(invocation.testFunction("message"))
+		
+		if invocation.respondsToSelector(#selector(CATForwardInvocation.testFunction(_:))) {
+		}
+		
+		invocation.addObject("Add Object Message.")
+		XCTAssertTrue((invocation.array as Array).count > 0)
+	}
 }

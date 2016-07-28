@@ -10,11 +10,9 @@ import Foundation
 import UIKit
 
 extension NSObject {
-    
     private struct AssociatedKeys {
         static var associatedObjectKey = "associatedObjectKey"
     }
-    
     var associatedObect: String? {
         get {
             return objc_getAssociatedObject(self,
@@ -30,7 +28,7 @@ extension NSObject {
 }
 
 extension NSObject {
-    
+	
     class func swizzleMethods(origSelector: Selector, withSelector swizzleSelector: Selector){
         let originalMethod = class_getInstanceMethod(self.classForCoder(), origSelector)
         let swizzleMethod = class_getInstanceMethod(self.classForCoder(), swizzleSelector)
@@ -48,8 +46,8 @@ extension NSObject {
             method_exchangeImplementations(originalMethod, swizzleMethod)
         }
     }
-    
 }
+
 extension UIViewController {
     
     public override class func initialize() {
@@ -71,25 +69,14 @@ extension UIViewController {
     }
 }
 
+
 extension NSObject{
-    
-    func at_perfomSelecter(aSelecter: Selector, objects: AnyObject ...) -> AnyObject? {
-        //swift 版本暂时不知道怎么实现
-//        let method: Method = class_getInstanceMethod(self.dynamicType, aSelecter)
-//        
-//        guard method != nil else {
-//            return nil
-//        }
-//        
-//        let implementation = method_getImplementation(method)
-//        
-//        typealias Funcation = @convention(c)(Any)
-//        
-        
-        return nil
+	public func at_perfomSelecter(aSelecter: Selector, withObjects args: CVarArgType ...) -> AnyObject? {
+		return self.at_performSelector(aSelecter, args: getVaList(args))
     }
-    
+	
 }
+
 
 extension NSObject{
     public func at_testPerformSelecter(message: String) -> String? {

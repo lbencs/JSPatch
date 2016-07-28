@@ -38,7 +38,9 @@
 		BD1AADC11CEAB5CE005D8CF3 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */; };
 		BD2B4AFD1D2B3DFD00115E1A /* CATRuntimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */; };
 		BD91ED0E1D348519001F0520 /* CATMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91ED0D1D348519001F0520 /* CATMessage.swift */; };
+		BDB336A01D49AE2F0063FB36 /* CATForwardInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB3369F1D49AE2F0063FB36 /* CATForwardInvocation.m */; };
 		BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1570C1D2A86B900BC7306 /* JSParser.swift */; };
+		BDE652961D4A02F400061A52 /* CATOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE652951D4A02F400061A52 /* CATOperationQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +118,11 @@
 		BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dome-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATRuntimer.swift; sourceTree = "<group>"; };
 		BD91ED0D1D348519001F0520 /* CATMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATMessage.swift; sourceTree = "<group>"; };
+		BDB3369E1D49AE2F0063FB36 /* CATForwardInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATForwardInvocation.h; sourceTree = "<group>"; };
+		BDB3369F1D49AE2F0063FB36 /* CATForwardInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATForwardInvocation.m; sourceTree = "<group>"; };
 		BDC1570C1D2A86B900BC7306 /* JSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSParser.swift; sourceTree = "<group>"; };
+		BDE652941D4A02F400061A52 /* CATOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATOperationQueue.h; sourceTree = "<group>"; };
+		BDE652951D4A02F400061A52 /* CATOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATOperationQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,8 @@
 				55AEB78D1D28FB52009E5FE7 /* JPSpecialInit.m */,
 				55AEB78E1D28FB52009E5FE7 /* JPStructPointer.h */,
 				55AEB78F1D28FB52009E5FE7 /* JPStructPointer.m */,
+				BDE652941D4A02F400061A52 /* CATOperationQueue.h */,
+				BDE652951D4A02F400061A52 /* CATOperationQueue.m */,
 				55AEB7901D28FB52009E5FE7 /* UIKit */,
 			);
 			path = Extensions;
@@ -248,6 +256,8 @@
 				55D346A91D43071A002ED031 /* NSObject+CATPerformSelecter.h */,
 				55D346AA1D43071A002ED031 /* NSObject+CATPerformSelecter.m */,
 				55D346AC1D43080C002ED031 /* CATExtensions.swift */,
+				BDB3369E1D49AE2F0063FB36 /* CATForwardInvocation.h */,
+				BDB3369F1D49AE2F0063FB36 /* CATForwardInvocation.m */,
 			);
 			path = Dome;
 			sourceTree = "<group>";
@@ -436,6 +446,8 @@
 				55AEB7A51D28FB52009E5FE7 /* JPStructPointer.m in Sources */,
 				BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */,
 				55AEB79D1D28FB52009E5FE7 /* JPCGImage.m in Sources */,
+				BDB336A01D49AE2F0063FB36 /* CATForwardInvocation.m in Sources */,
+				BDE652961D4A02F400061A52 /* CATOperationQueue.m in Sources */,
 				BD1AAD8F1CEAB53A005D8CF3 /* AppDelegate.swift in Sources */,
 				55AEB79B1D28FB52009E5FE7 /* JPCGContext.m in Sources */,
 				55AEB7A81D28FB52009E5FE7 /* JPUIImage.m in Sources */,

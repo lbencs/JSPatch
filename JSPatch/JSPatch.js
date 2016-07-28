@@ -140,7 +140,7 @@ var global = this
       Object.defineProperty(Object.prototype, method, {value: _customMethods[method], configurable:false, enumerable: false})
     }
   }
-
+//引用
   var _require = function(clsName) {
     if (!global[clsName]) {
       global[clsName] = {
@@ -265,6 +265,7 @@ var global = this
     return {args: args, cb: callback, __isBlock: 1}
   }
   
+  //将js的log函数指向Objective的NSObject
   if (global.console) {
     var jsLogger = console.log;
     global.console.log = function() {
