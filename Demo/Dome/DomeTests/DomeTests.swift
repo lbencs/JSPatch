@@ -33,21 +33,12 @@ class DomeTests: XCTestCase {
         }
     }
     
-    func testPerform() {
-		XCTAssertNotNil(NSObject().at_performSelector(#selector(NSObject.at_testPerformSelecter(_:)), withObject: "Test PerformSelecter:"))
-		XCTAssertNotNil(CATForwardInvocation().at_perfomSelecter(#selector(CATForwardInvocation.testFunction(_:from:)), withObjects: "message","from"))
-    }
-	
-	func testAssociated(){
-        let obj = NSObject()
-        obj.associatedObect = "lben"
-        XCTAssertEqual(obj.associatedObect, "lben")
-    }
+    
 	
 	func testForwardInvocation() {
 		XCTAssertTrue(CATForwardInvocation().respondsToSelector(#selector(CATForwardInvocation.testFunction(_:))))
 	}
-
+    
 	func testSwizzleForwardInvocation() {
 		
 		let invocation: AnyObject = CATForwardInvocation()
@@ -63,3 +54,4 @@ class DomeTests: XCTestCase {
 		XCTAssertTrue((invocation.array as Array).count > 0)
 	}
 }
+ 

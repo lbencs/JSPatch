@@ -9,6 +9,7 @@
 #import "CATForwardInvocation.h"
 #import "Dome-swift.h"
 
+#define ForwardBySwizzle (0)
 
 @interface CATForwardInvocation ()
 @end
@@ -31,17 +32,19 @@
 {
 	return [message stringByAppendingString:from];
 }
-
 - (NSString *)CATNotFundMethod:(NSString *)message
 {
 	return message;
 }
 
+#pragma mak -
 - (void)swizzle
 {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
+#if ForwardBySwizzle
 		[[self class] swizzleMethods:@selector(forwardInvocation:) withSelector:@selector(CATForwardInvocation:)];
+#endif
 		[[self class] swizzleMethods:@selector(testFunction:) withSelector:@selector(CATTestFunction:)];
 	});
 }
@@ -49,13 +52,14 @@
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
 	NSLog(@"%@",NSStringFromSelector(aSelector));
-	if ([self respondsToSelector:aSelector]) {
-		return [self methodSignatureForSelector:aSelector];
-	}else{
-		return [self.array methodSignatureForSelector:aSelector];
-	}
-	return nil;
+    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
+    if (!signature) {
+        signature = [self.array methodSignatureForSelector:aSelector];
+    }
+    return signature;
 }
+
+#if ForwardBySwizzle
 - (void)CATForwardInvocation:(NSInvocation *)anInvocation
 {
 	NSLog(@"%@",anInvocation.description);
@@ -64,13 +68,19 @@
 	id target = [self.array methodSignatureForSelector:[anInvocation selector]] ? _array : self;
 	[anInvocation invokeWithTarget:target];
 }
-- (NSMethodSignature *)CATMethodSignatureForSelector:(SEL)aSelector
+#else
+- (void)forwardInvocation:(NSInvocation *)anInvocation
 {
-	NSLog(@"%@",NSStringFromSelector(aSelector));
-	return nil;
+    if ([self.array respondsToSelector:[anInvocation selector]]) {
+        [anInvocation invokeWithTarget:self.array];
+    }else{
+        [super forwardInvocation:anInvocation];
+    }
 }
+#endif
 
 
+#pragma mark - getter&&setter
 
 - (NSMutableArray *)array
 {

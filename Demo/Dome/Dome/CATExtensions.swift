@@ -30,6 +30,7 @@ extension NSObject {
 extension NSObject {
 	
     class func swizzleMethods(origSelector: Selector, withSelector swizzleSelector: Selector){
+        
         let originalMethod = class_getInstanceMethod(self.classForCoder(), origSelector)
         let swizzleMethod = class_getInstanceMethod(self.classForCoder(), swizzleSelector)
         
@@ -46,6 +47,16 @@ extension NSObject {
             method_exchangeImplementations(originalMethod, swizzleMethod)
         }
     }
+    
+    class func replaceMethod(origSelector: Selector, replaceSelector: Selector) {
+        
+        let replaceMethod = class_getInstanceMethod(self.classForCoder(), replaceSelector)
+        class_replaceMethod(self.classForCoder(),
+                            origSelector,
+                            method_getImplementation(replaceMethod),
+                            method_getTypeEncoding(replaceMethod))
+    }
+    
 }
 
 extension UIViewController {

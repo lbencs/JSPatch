@@ -38,8 +38,10 @@ class JSParser: NSObject {
 		jsContext.setObject(unsafeBitCast(sendMessageFromJsToObjc, AnyObject.self), forKeyedSubscript: "sendMessageToObjc")
 		jsContext.setObject(unsafeBitCast(showAlertView, AnyObject.self), forKeyedSubscript: "sendAlertMessage")
 		
+        print("log----------------------")
 		print(jsContext.evaluateScript("sendMessageToObjc(' Message from js.')"))
 		jsContext.evaluateScript("sendAlertMessage('This is a alert Message from JS')")
+        print("log----------------------")
 	}
     
 	func simpleTransferFromObjcToJs() -> Void {

@@ -67,10 +67,10 @@ defineClass('Dome.CATListViewController : UIViewController<UITableViewDelegate,U
 		
 	})
     _executeActionWhenUserInitiated(function() {
-	_printStock()
-      for (var i = 0; i < 100000; i++) {
-        console.log(i)
-      }
+//	_printStock()
+//      for (var i = 0; i < 100000; i++) {
+//        console.log(i)
+//      }
     })
   },
   makeup: function() {

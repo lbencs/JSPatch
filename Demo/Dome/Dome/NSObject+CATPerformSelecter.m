@@ -7,6 +7,56 @@
 //
 
 #import "NSObject+CATPerformSelecter.h"
+#import "Dome-swift.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
+#import <objc/objc.h>
+
+@implementation NSObject (CATRuntime)
+
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[self class] swizzleMethods:@selector(at_testSwizzleMethod) withSelector:@selector(CATTestSwizzleMethod)];
+        [[self class] replaceMethod:@selector(at_testReplaceMethod) replaceSelector:@selector(CATTestReplaceMethod)];
+    });
+}
+
+- (BOOL)at_testMethodForSelector
+{
+    void (*setter)(id, SEL, id, id);
+    int i;
+    id target = [NSMutableDictionary new];
+    
+    setter = (void (*)(id, SEL, id, id))[target methodForSelector:@selector(setObject:forKey:)];
+    for ( i = 0 ; i < 1000 ; i++ )
+        setter(target, @selector(setObject:forKey:), @(i).stringValue, @(i).stringValue);
+    return [target count] == 1000;
+}
+
+- (BOOL)at_testSwizzleMethod
+{
+    return NO;
+}
+- (BOOL)CATTestSwizzleMethod
+{
+    return YES;
+}
+
+- (BOOL)at_testReplaceMethod
+{
+    return NO;
+}
+- (BOOL)CATTestReplaceMethod
+{
+    return YES;
+}
+
+
+
+
+@end
 
 @implementation NSObject (CATPerformSelecter)
 
@@ -67,6 +117,8 @@
     return __formatReturnValueToObectObject(invocation);
 
 }
+
+#pragma mark - private
 
 NSArray * __argumentsFromValist(va_list args)
 {

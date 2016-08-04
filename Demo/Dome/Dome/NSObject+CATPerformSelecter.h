@@ -8,8 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface NSObject (CATPerformSelecter)
+
 - (_Nullable id)at_performSelector:(_Nonnull SEL)aSelector;
 - (_Nullable id)at_performSelector:(_Nonnull SEL)aSelector withObject:(_Nullable id)aObject;
 - (_Nullable id)at_performSelector:(_Nonnull SEL)aSelector args:(va_list)args;
+
 @end
+
+
+@interface NSObject (CATRuntime)
+
+- (BOOL)at_testMethodForSelector;
+
+- (BOOL)at_testSwizzleMethod;
+
+- (BOOL)at_testReplaceMethod;
+@end
+
+
+

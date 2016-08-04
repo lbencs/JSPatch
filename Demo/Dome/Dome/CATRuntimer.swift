@@ -136,7 +136,7 @@ class CATRuntimer: NSObject {
 			let methodDescription: UnsafeMutablePointer<objc_method_description> = method_getDescription(method_t)
 			let methodD: objc_method_description = methodDescription.memory
 			method.methodDescription = CATMethodDescription(name: methodD.name, types: String(UTF8String: methodD.types))
-			
+            
 			method.typeEncoding = String(UTF8String: method_getTypeEncoding(method_t))
 			
 			for i in 0 ..< method_getNumberOfArguments(method_t)
@@ -149,8 +149,9 @@ class CATRuntimer: NSObject {
 			method.imp = method_getImplementation(method_t)
 			
 			methods.append(method);
+            
 		}
-		
+		free(methodList)
 		return methods;
 	}
 	
@@ -170,6 +171,7 @@ class CATRuntimer: NSObject {
 			
 			ivars.append(cIvar)
 		}
+        free(ivarList)
 		return ivars
 	}
 	
@@ -196,8 +198,10 @@ class CATRuntimer: NSObject {
 				attribute.value = String(UTF8String: attribute_t.value)
 				cProperty.attributes.append(attribute)
 			}
+            free(attributeList)
 			propertys.append(cProperty)
 		}
+        free(propertyList)
 		return propertys;
 	}
 	
