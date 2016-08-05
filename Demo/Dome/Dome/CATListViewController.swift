@@ -17,26 +17,14 @@ class CATListViewController: UIViewController {
     override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-        
-//        var error : NSError? = nil
-//        
-//        self.testPointer(&error)
-		//
-		print("----------------parser-------------")
-//		jsParser.parser()
-		print("----------------parser-------------")
-		print("----------------runtimer-------------")
-//        runtimer.test()
-        print("----------------runtimer-------------")
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
 	}
 	
     func showAlert() -> Void {
-		
+        
 		let alert = UIAlertController(title: "Alert", message: "Alert Message", preferredStyle: .Alert)
 		alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { alert in
 		}))

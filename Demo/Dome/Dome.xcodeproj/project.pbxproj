@@ -10,6 +10,7 @@
 		55268A841D2AB77900F3D19D /* CATListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55268A831D2AB77900F3D19D /* CATListViewController.swift */; };
 		5536BCD71D50EBA30085D391 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536BCD61D50EBA30085D391 /* MessageTests.swift */; };
 		5536BCDC1D524F2D0085D391 /* CATCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536BCDB1D524F2D0085D391 /* CATCollection.m */; };
+		5536BCDE1D5386370085D391 /* CATExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536BCDD1D5386370085D391 /* CATExtensionTests.swift */; };
 		55AEB7991D28FB52009E5FE7 /* JPCGBitmapContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AEB7771D28FB52009E5FE7 /* JPCGBitmapContext.m */; };
 		55AEB79A1D28FB52009E5FE7 /* JPCGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AEB7791D28FB52009E5FE7 /* JPCGColor.m */; };
 		55AEB79B1D28FB52009E5FE7 /* JPCGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AEB77B1D28FB52009E5FE7 /* JPCGContext.m */; };
@@ -40,7 +41,6 @@
 		BD1AADC11CEAB5CE005D8CF3 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = BD1AADBF1CEAB5CE005D8CF3 /* JSPatch.js */; };
 		BD2B4AFD1D2B3DFD00115E1A /* CATRuntimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */; };
 		BD91ED0E1D348519001F0520 /* CATMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91ED0D1D348519001F0520 /* CATMessage.swift */; };
-		BDB336A01D49AE2F0063FB36 /* CATForwardInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB3369F1D49AE2F0063FB36 /* CATForwardInvocation.m */; };
 		BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1570C1D2A86B900BC7306 /* JSParser.swift */; };
 		BDE652961D4A02F400061A52 /* CATOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE652951D4A02F400061A52 /* CATOperationQueue.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +67,7 @@
 		5536BCD61D50EBA30085D391 /* MessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		5536BCDA1D524F2D0085D391 /* CATCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATCollection.h; sourceTree = "<group>"; };
 		5536BCDB1D524F2D0085D391 /* CATCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATCollection.m; sourceTree = "<group>"; };
+		5536BCDD1D5386370085D391 /* CATExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATExtensionTests.swift; sourceTree = "<group>"; };
 		55AEB7761D28FB52009E5FE7 /* JPCGBitmapContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGBitmapContext.h; sourceTree = "<group>"; };
 		55AEB7771D28FB52009E5FE7 /* JPCGBitmapContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCGBitmapContext.m; sourceTree = "<group>"; };
 		55AEB7781D28FB52009E5FE7 /* JPCGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCGColor.h; sourceTree = "<group>"; };
@@ -123,8 +124,6 @@
 		BD1AADC21CEAB630005D8CF3 /* Dome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dome-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD2B4AFC1D2B3DFD00115E1A /* CATRuntimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATRuntimer.swift; sourceTree = "<group>"; };
 		BD91ED0D1D348519001F0520 /* CATMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATMessage.swift; sourceTree = "<group>"; };
-		BDB3369E1D49AE2F0063FB36 /* CATForwardInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATForwardInvocation.h; sourceTree = "<group>"; };
-		BDB3369F1D49AE2F0063FB36 /* CATForwardInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATForwardInvocation.m; sourceTree = "<group>"; };
 		BDC1570C1D2A86B900BC7306 /* JSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSParser.swift; sourceTree = "<group>"; };
 		BDE652941D4A02F400061A52 /* CATOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATOperationQueue.h; sourceTree = "<group>"; };
 		BDE652951D4A02F400061A52 /* CATOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATOperationQueue.m; sourceTree = "<group>"; };
@@ -261,8 +260,6 @@
 				55D346AC1D43080C002ED031 /* CATExtensions.swift */,
 				55D346A91D43071A002ED031 /* NSObject+CATPerformSelecter.h */,
 				55D346AA1D43071A002ED031 /* NSObject+CATPerformSelecter.m */,
-				BDB3369E1D49AE2F0063FB36 /* CATForwardInvocation.h */,
-				BDB3369F1D49AE2F0063FB36 /* CATForwardInvocation.m */,
 				5536BCDA1D524F2D0085D391 /* CATCollection.h */,
 				5536BCDB1D524F2D0085D391 /* CATCollection.m */,
 			);
@@ -274,6 +271,7 @@
 			children = (
 				BD1AADA31CEAB53A005D8CF3 /* DomeTests.swift */,
 				5536BCD61D50EBA30085D391 /* MessageTests.swift */,
+				5536BCDD1D5386370085D391 /* CATExtensionTests.swift */,
 				BD1AADA51CEAB53A005D8CF3 /* Info.plist */,
 			);
 			path = DomeTests;
@@ -455,7 +453,6 @@
 				55AEB7A51D28FB52009E5FE7 /* JPStructPointer.m in Sources */,
 				BDC1570D1D2A86B900BC7306 /* JSParser.swift in Sources */,
 				55AEB79D1D28FB52009E5FE7 /* JPCGImage.m in Sources */,
-				BDB336A01D49AE2F0063FB36 /* CATForwardInvocation.m in Sources */,
 				BDE652961D4A02F400061A52 /* CATOperationQueue.m in Sources */,
 				BD1AAD8F1CEAB53A005D8CF3 /* AppDelegate.swift in Sources */,
 				55AEB79B1D28FB52009E5FE7 /* JPCGContext.m in Sources */,
@@ -467,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5536BCDE1D5386370085D391 /* CATExtensionTests.swift in Sources */,
 				BD1AADA41CEAB53A005D8CF3 /* DomeTests.swift in Sources */,
 				5536BCD71D50EBA30085D391 /* MessageTests.swift in Sources */,
 			);

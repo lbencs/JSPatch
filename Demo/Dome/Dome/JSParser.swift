@@ -13,19 +13,10 @@ import UIKit
 class JSParser: NSObject {
 	
 	let jsContext = JSContext()
-	
-	func parser() -> Void {
-		
-        self.simpleTransferFromObjcToJs()
-		
-        self.simpleTransferFromJsToObjc()
-		
-	}
-    
+
 	func simpleTransferFromJsToObjc() -> Void {
-		
 		func sendMessage(message: String) -> String{
-			return "simpleTransferFromJsToObjc_sendMessage:" + message
+            return "simpleTransferFromJsToObjc_sendMessage:" + message
 		}
 		
 		let sendMessageFromJsToObjc: @convention(block) String -> String = { input in

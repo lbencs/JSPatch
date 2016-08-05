@@ -32,26 +32,5 @@ class DomeTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    
-	
-	func testForwardInvocation() {
-		XCTAssertTrue(CATForwardInvocation().respondsToSelector(#selector(CATForwardInvocation.testFunction(_:))))
-	}
-    
-	func testSwizzleForwardInvocation() {
-		
-		let invocation: AnyObject = CATForwardInvocation()
-		
-		invocation.swizzle()
-		
-		XCTAssertTrue(invocation.testFunction("message"))
-		
-		if invocation.respondsToSelector(#selector(CATForwardInvocation.testFunction(_:))) {
-		}
-		
-		invocation.addObject("Add Object Message.")
-		XCTAssertTrue((invocation.array as Array).count > 0)
-	}
 }
  

@@ -152,6 +152,7 @@ class CATRuntimer: NSObject {
             
 		}
 		free(methodList)
+        
 		return methods;
 	}
 	

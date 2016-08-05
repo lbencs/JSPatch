@@ -58,6 +58,7 @@
 
 @end
 
+
 @implementation NSObject (CATPerformSelecter)
 
 - (id)at_performSelector:(SEL)aSelector
@@ -169,4 +170,102 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     }
     return result;
 }
+@end
+
+
+@implementation NSObject (CATExtentions)
+
++ (NSArray<NSString *> *)at_allIvarNames
+{
+    NSMutableArray *ivars = [[NSMutableArray alloc] init];
+    
+    unsigned int count;
+    
+    Ivar *ivarList = class_copyIvarList([self class],&count);
+    
+    for (int i = 0; i < count; i ++) {
+        
+        Ivar ivar = ivarList[i];
+        
+        NSString *name = [NSString stringWithUTF8String:ivar_getName(ivar)];
+        
+        [ivars addObject:name];
+    }
+    
+    free(ivarList);
+    
+    NSLog(@"ivars: %@",ivars);
+    
+    return [ivars copy];
+}
++ (NSArray <NSString *> *)at_allPropertyNames
+{
+    NSMutableArray *propertys = [[NSMutableArray alloc] init];
+    
+    unsigned int count = 0;
+    
+    objc_property_t *propertyList = class_copyPropertyList([self class], &count);
+    
+    for (int i = 0; i < count; i ++) {
+        
+        objc_property_t property = propertyList[i];
+        
+        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+        
+        [propertys addObject:name];
+    }
+    
+    free(propertyList);
+    
+    NSLog(@"propertys: %@",propertys);
+    
+    return [propertys copy];
+}
+
+
+//- (void)encodeWithCoder:(NSCoder *)coder
+//{
+//    [super encodeWithCoder:coder];
+//    
+//}
+
+@end
+
+
+@implementation CATEncodeTestModel
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        NSArray *propertyNames = [[self class] at_allPropertyNames];
+        for (NSString *name in propertyNames) {
+            [self setValue:[coder decodeObjectForKey:name] forKey:name];
+        }
+//        self.propertyName = [coder decodeObjectForKey:@"propertyName"];
+//        self.propertyCaches = [coder decodeObjectForKey:@"propertyCaches"];
+        
+    }
+    return self;
+}
+
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    NSArray *propertyNames = [[self class] at_allPropertyNames];
+    NSArray *ivarNames = [[self class] at_allIvarNames];
+    
+    NSLog(@"%@'s propertys: %@",self, propertyNames);
+    NSLog(@"%@'s ivars: %@",self, ivarNames);
+    
+    
+    for (NSString *property in propertyNames) {
+        SEL getSel = NSSelectorFromString(property);
+        [coder encodeObject:[self performSelector:getSel] forKey:property];
+    }
+    
+//    [coder encodeObject:self.propertyName forKey:@"propertyName"];
+//    [coder encodeObject:self.propertyCaches forKey:@"propertyCaches"];
+}
+
 @end

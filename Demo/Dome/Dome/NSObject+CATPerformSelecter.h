@@ -28,4 +28,22 @@
 @end
 
 
+@interface NSObject (CATExtentions)<NSCopying>
+
+/*  
+ 问题
+ 1. property vs ivar 的差别
+ */
++ (NSArray <NSString *> * _Nonnull)at_allPropertyNames;
++ (NSArray <NSString *> * _Nonnull)at_allIvarNames;
+
+@end
+
+
+@interface CATEncodeTestModel : NSObject{
+    NSString *_ivarName;
+}
+@property (nonatomic, copy, nonnull) NSString *propertyName;
+@property (nonatomic, copy, nonnull) NSDictionary *propertyCaches;
+@end
 

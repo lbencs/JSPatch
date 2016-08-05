@@ -1,3 +1,6 @@
+
+
+
 require('UIViewController,UITableView,UIView,UIColor,UITableViewCell,NSIndexPath')
 require('JPEngine').addExtensions(['JPMemory'])
 require('JPEngine').addExtensions(['CATOperationQueue'])
@@ -104,7 +107,7 @@ defineClass('Dome.CATListViewController : UIViewController<UITableViewDelegate,U
     cell.textLabel().setText("hahaha")
     return cell
   },
-  tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
+tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
     console.log("message");
     var nextVC = UIViewController.alloc().init();
     nextVC.setTitle("NextPage")

@@ -32,6 +32,7 @@ NSOperationQueue* CATActionOperationQueue(){
 			[funcValue callWithArguments:nil];
 		}];
 	};
+    
 	context[@"_printStock"] = ^(){
 		NSLog(@"%@",[NSThread callStackSymbols]);
 	};
