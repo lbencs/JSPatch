@@ -175,6 +175,13 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
 
 @implementation NSObject (CATExtentions)
 
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+//        [self swizzleMethods:@selector(setValue:forUndefinedKey:) withSelector:@selector(<#selector#>)]
+    });
+}
 + (NSArray<NSString *> *)at_allIvarNames
 {
     NSMutableArray *ivars = [[NSMutableArray alloc] init];
@@ -189,12 +196,16 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
         
         NSString *name = [NSString stringWithUTF8String:ivar_getName(ivar)];
         
+        if ([name hasPrefix:@"_"]) {
+            name = [name substringFromIndex:1];
+        }
+        
         [ivars addObject:name];
     }
     
     free(ivarList);
     
-    NSLog(@"ivars: %@",ivars);
+//    NSLog(@"ivars: %@",ivars);
     
     return [ivars copy];
 }
@@ -217,22 +228,126 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     
     free(propertyList);
     
-    NSLog(@"propertys: %@",propertys);
+//    NSLog(@"propertys: %@",propertys);
     
     return [propertys copy];
 }
+- (NSDictionary *)at_modelToJSONObjc
+{
+    NSAssert(![self isKindOfClass:[NSArray class]], @"use at_arrayModelToJSONObjc");
+    
+    NSArray *ivars = [[self class] at_allIvarNames];
+    
+    NSMutableDictionary *jsonObjc = [[NSMutableDictionary alloc] init];
+    
+    for (NSString *ivar in ivars) {
+        
+        id objc = [self valueForKey:ivar];
+        if (!objc) {
+            objc = [NSNull null];
+        }
+        
+        if (_isJsonObject(objc)) {
+            if ([objc isKindOfClass:[NSArray class]]) {
+                [jsonObjc setObject:[objc at_arrayModelToJSONObjc] forKey:ivar];
+            }else{
+                [jsonObjc setObject:objc forKey:ivar];
+            }
+        }else{
+            [jsonObjc setObject:[objc at_modelToJSONObjc] forKey:ivar];
+        }
+    }
+    return [jsonObjc copy];
+}
+- (id)at_JSONObjcToModel:(NSDictionary *)jsonObjc
+{
+    id model = [[[self class] alloc] init];
+    
+    NSArray *ivars = [[self class] at_allIvarNames];
+    
+    for (NSString *ivar in ivars) {
+        
+        id value = [jsonObjc objectForKey:ivar];
+        
+        if (!value) {
+            continue;
+        }
+        
+        if (_isArrayObjc(value)) {
+            
+        }else if(_isDictionaryObjc(value)){
+            
+        }else{
+            [model setValue:value forKey:ivar];
+        }
+    }
+    return model;
+}
+- (NSArray *)at_JSONObjcArrayToModeArray:(NSArray *)jsonArray
+{
+    NSMutableArray *modeArray = [[NSMutableArray alloc] init];
+    
+    return [modeArray copy];
+}
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
+BOOL _isArrayObjc(id objc)
+{
+    return [objc isKindOfClass:[NSArray class]];
+}
+BOOL _isDictionaryObjc(id objc)
+{
+    return [objc isKindOfClass:[NSDictionary class]];
+}
+BOOL _isJsonObject(id objc)
+{
+    return [objc isKindOfClass:[NSString class]] ||
+    [objc isKindOfClass:[NSArray class]] ||
+    [objc isKindOfClass:[NSDictionary class]] ||
+    [objc isKindOfClass:[NSNumber class]] ||
+    [objc isKindOfClass:[NSNull class]];
+}
+@end
 
-
-//- (void)encodeWithCoder:(NSCoder *)coder
-//{
-//    [super encodeWithCoder:coder];
-//    
-//}
-
+@implementation NSArray (CATExtentions)
+- (NSArray *)at_arrayModelToJSONObjc
+{
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    
+    NSArray *objcs = (NSArray *)self;
+    
+    for (id objc in objcs) {
+        if (_isJsonObject(objc)) {
+            if ([objc isKindOfClass:[NSArray class]]) {
+                [arr addObject:[objc at_arrayModelToJSONObjc]];
+            }
+            [arr addObject:objc];
+        }else{
+            [arr addObject:[objc at_modelToJSONObjc]];
+        }
+    }
+    return [arr copy];
+}
 @end
 
 
 @implementation CATEncodeTestModel
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    CATEncodeTestModel *model = [[[self class] allocWithZone:zone] init];
+    model->_ivarName = @"sun";
+    model.propertyBool = self.propertyBool;
+    model.propertyFloat = self.propertyFloat;
+    model.propertyDouble = self.propertyDouble;
+    model.propertyName = [self.propertyName copy];
+    model.propertyCaches = [self.propertyCaches copy];
+    model.model = [self.model copy];
+    model.modelArray = [self.modelArray copy];
+    return model;
+}
 
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
@@ -258,10 +373,13 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     NSLog(@"%@'s propertys: %@",self, propertyNames);
     NSLog(@"%@'s ivars: %@",self, ivarNames);
     
+    [self setValue:@(10) forKey:@"propertyInteger"];
+    
     
     for (NSString *property in propertyNames) {
+        id value = [self valueForKey:property];
         SEL getSel = NSSelectorFromString(property);
-        [coder encodeObject:[self performSelector:getSel] forKey:property];
+        [coder encodeObject:[self valueForKey:property] forKey:property];
     }
     
 //    [coder encodeObject:self.propertyName forKey:@"propertyName"];

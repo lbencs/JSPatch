@@ -50,6 +50,13 @@ class CATExtensionTests: XCTestCase {
         
         model.propertyName = "lben";
         model.propertyCaches = ["1":"2"]
+        model.propertyBool = true
+        model.propertyInteger = 19
+        model.propertyDouble = 1.00
+        model.propertyFloat = 1.3
+        
+//        model .setValue(1, forKey: "propertyInteger")
+    
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last
         let filePath = path?.stringByAppendingString("user.lben")
         
@@ -59,5 +66,53 @@ class CATExtensionTests: XCTestCase {
 
         XCTAssertTrue(m.propertyName == "lben" && (model.propertyCaches["1"] as! String) == "2")
 
+    }
+    
+    func testModelToObjc() {
+        
+        let model: CATEncodeTestModel = CATEncodeTestModel()
+        model.propertyName = "lben";
+        model.propertyCaches = ["1":"2"]
+        model.propertyBool = true
+        model.propertyInteger = 19
+        model.propertyDouble = 1.00
+        model.propertyFloat = 1.3
+        model.model = model.copy() as? CATEncodeTestModel
+        model.modelArray = [(model.copy() as? CATEncodeTestModel)!, (model.copy() as? CATEncodeTestModel)!]
+        
+        let dic = model.at_modelToJSONObjc()
+        
+        print(dic)
+    }
+    func testObjcToModel() {
+        let json:[String: AnyObject] = [
+            "ivarName" : "sun",
+            "model" : "<null>",
+            "modelArray" : "<null>",
+            "propertyBool" :  1,
+            "propertyCaches" : [
+                "1" : 2,
+            ],
+            "propertyDouble" : 1,
+            "propertyFloat" : 1.3,
+            "propertyInteger" : 0,
+            "propertyName" : "lben",
+        ];
+        let mode: CATEncodeTestModel = CATEncodeTestModel.at_JSONObjcToModel(json) as! CATEncodeTestModel
+        print(mode)
+    }
+    
+    func testModelIvarDetail() {
+        let model: CATEncodeTestModel = CATEncodeTestModel()
+        model.propertyName = "lben";
+        model.propertyCaches = ["1":"2"]
+        model.propertyBool = true
+        model.propertyInteger = 19
+        model.propertyDouble = 1.00
+        model.propertyFloat = 1.3
+        model.model = model.copy() as? CATEncodeTestModel
+        model.modelArray = [(model.copy() as? CATEncodeTestModel)!, (model.copy() as? CATEncodeTestModel)!]
+//        model.ivarList()
+        print(CATRuntimer().ivarList(CATEncodeTestModel.classForCoder()))
     }
 }
