@@ -87,8 +87,6 @@ class CATExtensionTests: XCTestCase {
     func testObjcToModel() {
         let json:[String: AnyObject] = [
             "ivarName" : "sun",
-            "model" : "<null>",
-            "modelArray" : "<null>",
             "propertyBool" :  1,
             "propertyCaches" : [
                 "1" : 2,
@@ -97,9 +95,61 @@ class CATExtensionTests: XCTestCase {
             "propertyFloat" : 1.3,
             "propertyInteger" : 0,
             "propertyName" : "lben",
+            "model":[
+                "ivarName" : "sun",
+                "model" : "<null>",
+                "modelArray" : "<null>",
+                "propertyBool" :  1,
+                "propertyCaches" : [
+                    "1" : 2,
+                ],
+                "propertyDouble" : 1,
+                "propertyFloat" : 1.3,
+                "propertyInteger" : 0,
+                "propertyName" : "lben",
+            ],
+            "modelArray" : [
+                [
+                    "ivarName" : "sun",
+                    "model" : "<null>",
+                    "modelArray" : "<null>",
+                    "propertyBool" :  1,
+                    "propertyCaches" : [
+                        "1" : 2,
+                    ],
+                    "propertyDouble" : 1,
+                    "propertyFloat" : 1.3,
+                    "propertyInteger" : 0,
+                    "propertyName" : "lben",
+                ],[
+                    "ivarName" : "sun",
+                    "model" : "<null>",
+                    "modelArray" : "<null>",
+                    "propertyBool" :  1,
+                    "propertyCaches" : [
+                        "1" : 2,
+                    ],
+                    "propertyDouble" : 1,
+                    "propertyFloat" : 1.3,
+                    "propertyInteger" : 0,
+                    "propertyName" : "lben",
+                ],[
+                    "ivarName" : "sun",
+                    "model" : "<null>",
+                    "modelArray" : "<null>",
+                    "propertyBool" :  1,
+                    "propertyCaches" : [
+                        "1" : 2,
+                    ],
+                    "propertyDouble" : 1,
+                    "propertyFloat" : 1.3,
+                    "propertyInteger" : 0,
+                    "propertyName" : "lben",
+                ]
+            ]
         ];
-        let mode: CATEncodeTestModel = CATEncodeTestModel.at_JSONObjcToModel(json) as! CATEncodeTestModel
-        print(mode)
+        let mode = CATEncodeTestModel.at_JSONObjcToModel(json)
+        print(mode.at_modelToJSONObjc())
     }
     
     func testModelIvarDetail() {

@@ -85,7 +85,6 @@ extension NSObject{
 	public func at_perfomSelecter(aSelecter: Selector, withObjects args: CVarArgType ...) -> AnyObject? {
 		return self.at_performSelector(aSelecter, args: getVaList(args))
     }
-	
 }
 
 

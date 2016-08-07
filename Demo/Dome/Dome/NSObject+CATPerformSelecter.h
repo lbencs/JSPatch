@@ -36,9 +36,10 @@
 + (NSArray <NSString *> * _Nonnull)at_allPropertyNames;
 + (NSArray <NSString *> * _Nonnull)at_allIvarNames;
 
++ (NSArray * _Nonnull)at_JSONObjcArrayToModelArray:(NSArray * _Nonnull)jsonArray;
++ (instancetype _Nonnull)at_JSONObjcToModel:(NSDictionary * _Nonnull)jsonDic;
+
 - (NSDictionary * _Nonnull)at_modelToJSONObjc;
-- (id _Nonnull)at_JSONObjcToModel:(NSDictionary * _Nonnull)jsonObjc;
-- (NSArray * _Nonnull)at_JSONObjcArrayToModeArray:(NSArray * _Nonnull)jsonArray;
 @end
 
 @interface NSArray (CATExtentions)

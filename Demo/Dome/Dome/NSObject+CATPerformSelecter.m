@@ -85,7 +85,7 @@
 }
 - (id)at_performSelector:(SEL)aSelector args:(va_list)args
 {
-	return [self at_performSelector:aSelector withObjects:nil orVAList:args hasArgument:YES];
+    return [self at_performSelector:aSelector withObjects:nil orVAList:args hasArgument:YES];
 }
 - (id)at_performSelector:(SEL)aSelector
              withObjects:(id)aObject
@@ -100,11 +100,11 @@
     
     if (hasArguments) {
         NSArray *arguments = __argumentsFromValist(args);
-		
-		int index = 2;
-		if (aObject) {
-			[invocation setArgument:&aObject atIndex:index++];
-		}
+        
+        int index = 2;
+        if (aObject) {
+            [invocation setArgument:&aObject atIndex:index++];
+        }
         
         if ([arguments count] > 0) {
             [arguments enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -116,7 +116,7 @@
     [invocation invoke];
     
     return __formatReturnValueToObectObject(invocation);
-
+    
 }
 
 #pragma mark - private
@@ -172,15 +172,85 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
 }
 @end
 
+@interface CATIvar : NSObject
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *type;
+- (NSString *)modelString;
+@end
+
+@implementation CATIvar
+- (NSString *)modelString
+{
+    NSString *regex = @"\"([^\"]*)\"";//@"\"(.*?)\"";
+    NSError *error = nil;
+    NSRegularExpression *expression =
+    [NSRegularExpression regularExpressionWithPattern:regex
+                                              options:0
+                                                error:&error];
+    if (!error) {
+        NSTextCheckingResult *match =
+        [expression firstMatchInString:_type//@"{\"internal_1\": [{\"version\": 4,\"addr\": \"192.160.1.11\"}]}"//_type
+                               options:0
+                                 range:NSMakeRange(0, [_type length])];
+        if (match) {
+            // 截获特定的字符串
+            NSString *result = [_type substringWithRange:match.range];
+            result = [result substringFromIndex:1];
+            result = [result substringToIndex:result.length -1];
+            NSLog(@"%@",result);
+            return result;
+        }
+    }
+    return nil;
+}
+@end
+
+
+BOOL _isArrayObjc(id objc)
+{
+    return [objc isKindOfClass:[NSArray class]];
+}
+BOOL _isDictionaryObjc(id objc)
+{
+    return [objc isKindOfClass:[NSDictionary class]];
+}
+BOOL _isJsonObject(id objc)
+{
+    return [objc isKindOfClass:[NSString class]] ||
+    [objc isKindOfClass:[NSArray class]] ||
+    [objc isKindOfClass:[NSDictionary class]] ||
+    [objc isKindOfClass:[NSNumber class]] ||
+    [objc isKindOfClass:[NSNull class]];
+}
 
 @implementation NSObject (CATExtentions)
+
+- (NSDictionary *)at_classAtArrays
+{
+    return nil;
+}
 
 + (void)load
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        [self swizzleMethods:@selector(setValue:forUndefinedKey:) withSelector:@selector(<#selector#>)]
+        //        [self swizzleMethods:@selector(setValue:forUndefinedKey:) withSelector:@selector(<#selector#>)]
     });
+}
++ (NSArray *)at_allIvars
+{
+    NSMutableArray *ivars = [[NSMutableArray alloc] init];
+    unsigned int count = 0;
+    Ivar *ivarList = class_copyIvarList([self class], &count);
+    for (int i = 0; i < count; i ++) {
+        Ivar ivar = ivarList[i];
+        CATIvar *model = [[CATIvar alloc] init];
+        NSString *name = [NSString stringWithUTF8String:ivar_getName(ivar)];
+        model.name = [name hasPrefix:@"_"] ? [name substringFromIndex:1] : name;
+        model.type = [NSString stringWithUTF8String:ivar_getTypeEncoding(ivar)];
+        [ivars addObject:model];
+    }
+    return [ivars copy];
 }
 + (NSArray<NSString *> *)at_allIvarNames
 {
@@ -205,7 +275,7 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     
     free(ivarList);
     
-//    NSLog(@"ivars: %@",ivars);
+    //    NSLog(@"ivars: %@",ivars);
     
     return [ivars copy];
 }
@@ -228,10 +298,64 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     
     free(propertyList);
     
-//    NSLog(@"propertys: %@",propertys);
-    
     return [propertys copy];
 }
++ (NSArray *)at_JSONObjcArrayToModelArray:(NSArray *)jsonArray
+{
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    for (id objc in jsonArray) {
+        if (_isDictionaryObjc(objc)) {
+            [arr addObject:[self at_JSONObjcToModel:objc]];
+        }
+    }
+    return arr;
+}
++ (instancetype)at_JSONObjcToModel:(NSDictionary *)jsonDic
+{
+    id model = [[self alloc] init];
+ 
+    NSArray *ivars = [self at_allIvars];
+    
+    for (CATIvar *ivar in ivars) {
+        
+        id value = [jsonDic objectForKey:ivar.name];
+        
+        if (!value) {
+            continue;
+        }
+        
+        NSString *objcString = [ivar modelString];
+        
+        if (_isArrayObjc(value)) {
+            
+            NSArray *jsonArr = (NSArray *)value;
+            
+            [model setValue:[CATEncodeTestModel at_JSONObjcArrayToModelArray:jsonArr] forKey:ivar.name];
+            
+        }else if(_isDictionaryObjc(value)){
+            
+            if ([objcString isEqualToString:@"NSDictionary"]) {
+                
+                [model setValue:value forKey:ivar.name];
+            
+            }else{
+                
+                Class class = NSClassFromString(objcString);
+                
+                if (!model) {
+                    NSAssert1(NO, @"Model %@ is not exists.", objcString);
+                }else{
+                    [model setValue:[class at_JSONObjcToModel:value] forKey:ivar.name] ;
+                }
+            }
+        }else{
+            [model setValue:value forKey:ivar.name];
+        }
+    }
+    return model;
+}
+
+
 - (NSDictionary *)at_modelToJSONObjc
 {
     NSAssert(![self isKindOfClass:[NSArray class]], @"use at_arrayModelToJSONObjc");
@@ -259,58 +383,15 @@ id __formatReturnValueToObectObject(NSInvocation *invocation)
     }
     return [jsonObjc copy];
 }
-- (id)at_JSONObjcToModel:(NSDictionary *)jsonObjc
-{
-    id model = [[[self class] alloc] init];
-    
-    NSArray *ivars = [[self class] at_allIvarNames];
-    
-    for (NSString *ivar in ivars) {
-        
-        id value = [jsonObjc objectForKey:ivar];
-        
-        if (!value) {
-            continue;
-        }
-        
-        if (_isArrayObjc(value)) {
-            
-        }else if(_isDictionaryObjc(value)){
-            
-        }else{
-            [model setValue:value forKey:ivar];
-        }
-    }
-    return model;
-}
-- (NSArray *)at_JSONObjcArrayToModeArray:(NSArray *)jsonArray
-{
-    NSMutableArray *modeArray = [[NSMutableArray alloc] init];
-    
-    return [modeArray copy];
-}
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
     
 }
-BOOL _isArrayObjc(id objc)
-{
-    return [objc isKindOfClass:[NSArray class]];
-}
-BOOL _isDictionaryObjc(id objc)
-{
-    return [objc isKindOfClass:[NSDictionary class]];
-}
-BOOL _isJsonObject(id objc)
-{
-    return [objc isKindOfClass:[NSString class]] ||
-    [objc isKindOfClass:[NSArray class]] ||
-    [objc isKindOfClass:[NSDictionary class]] ||
-    [objc isKindOfClass:[NSNumber class]] ||
-    [objc isKindOfClass:[NSNull class]];
-}
+
 @end
 
+@interface NSArray ()
+@end
 @implementation NSArray (CATExtentions)
 - (NSArray *)at_arrayModelToJSONObjc
 {
@@ -329,11 +410,17 @@ BOOL _isJsonObject(id objc)
         }
     }
     return [arr copy];
+
 }
 @end
 
 
 @implementation CATEncodeTestModel
+
+- (NSDictionary *)at_classAtArrays
+{
+    return @{@"modelArray":[CATEncodeTestModel class]};
+}
 
 - (id)copyWithZone:(NSZone *)zone
 {
@@ -357,9 +444,6 @@ BOOL _isJsonObject(id objc)
         for (NSString *name in propertyNames) {
             [self setValue:[coder decodeObjectForKey:name] forKey:name];
         }
-//        self.propertyName = [coder decodeObjectForKey:@"propertyName"];
-//        self.propertyCaches = [coder decodeObjectForKey:@"propertyCaches"];
-        
     }
     return self;
 }
@@ -382,8 +466,8 @@ BOOL _isJsonObject(id objc)
         [coder encodeObject:[self valueForKey:property] forKey:property];
     }
     
-//    [coder encodeObject:self.propertyName forKey:@"propertyName"];
-//    [coder encodeObject:self.propertyCaches forKey:@"propertyCaches"];
+    //    [coder encodeObject:self.propertyName forKey:@"propertyName"];
+    //    [coder encodeObject:self.propertyCaches forKey:@"propertyCaches"];
 }
 
 @end
